@@ -11,7 +11,7 @@
 | Niagara System | `NS_SR_...` | `NS_SR_Collect_StarShard` |
 | Level | `Lvl_Starball...` | `Lvl_Starball_FirstPlayable` |
 | Actor Label | `SBR_...` | `SBR_Star_01` |
-| Folder | `GameDevFramework/StarballRun/...` | `GameDevFramework/StarballRun/FirstPlayable` |
+| Folder | `codex-gamedev-harness/StarballRun/...` | `codex-gamedev-harness/StarballRun/FirstPlayable` |
 
 ## 이름 사용 규칙
 

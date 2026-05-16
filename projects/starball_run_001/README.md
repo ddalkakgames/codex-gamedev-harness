@@ -1,6 +1,6 @@
 # 별공 런 프로젝트
 
-`starball_run_001`은 GameDevFramework의 실제 제작 테스트용 소형 플랫폼 게임이다.
+`starball_run_001`은 Codex GameDev Harness의 실제 제작 테스트용 소형 플랫폼 게임이다.
 
 ## 한 줄 설명
 

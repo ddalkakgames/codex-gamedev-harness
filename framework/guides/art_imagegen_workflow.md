@@ -13,7 +13,7 @@
 ## 산출물 위치
 
 ```text
-GameDevFramework/projects/<project_id>/art/
+codex-gamedev-harness/projects/<project_id>/art/
   direction/
     art_direction.md
   concepts/

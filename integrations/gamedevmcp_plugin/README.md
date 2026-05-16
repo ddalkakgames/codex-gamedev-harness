@@ -2,10 +2,10 @@
 
 ## 역할
 
-`GameDevFramework`는 게임 제작 운영 프레임워크이고, `GameDevMCPPlugin`은 Unreal Editor 조작을 담당하는 실행 backend다.
+`Codex GameDev Harness`는 게임 제작 운영 프레임워크이고, `GameDevMCPPlugin`은 Unreal Editor 조작을 담당하는 실행 backend다.
 
 ```text
-GameDevFramework
+Codex GameDev Harness
   -> GameDevMCPPlugin MCP endpoint
     -> Unreal Editor
 ```

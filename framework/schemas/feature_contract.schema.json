@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://gamedevmcp.local/schemas/feature_contract.schema.json",
-  "title": "GameDevFramework Feature Contract",
+  "title": "Codex GameDev Harness Feature Contract",
   "type": "object",
   "additionalProperties": false,
   "required": [

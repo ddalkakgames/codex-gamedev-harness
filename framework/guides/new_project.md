@@ -19,7 +19,7 @@ survival_builder_001
 ## 폴더 만들기
 
 ```text
-GameDevFramework/projects/<project_id>/
+codex-gamedev-harness/projects/<project_id>/
   README.md
   design/
   systems/

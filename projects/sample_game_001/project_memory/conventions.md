@@ -50,7 +50,7 @@
 
 임시 에셋에는 아래 metadata/tag를 남긴다.
 
-- `generated_by=GameDevFramework`
+- `generated_by=Codex GameDev Harness`
 - `version=<version_id>`
 - `slice=<slice_id>`
 - `asset_stage=prototype`

@@ -1,11 +1,11 @@
-# GameDevFramework
+# Codex GameDev Harness
 
 이 디렉터리는 여러 개의 게임 프로젝트를 AI와 함께 운영하기 위한 **AI 게임 스튜디오 운영 프레임워크**를 보관한다.
 
 구조는 두 영역으로 나뉜다.
 
 ```text
-GameDevFramework/
+codex-gamedev-harness/
   framework/   # 모든 게임 프로젝트가 공유하는 규칙, 템플릿, schema
   projects/    # 게임 프로젝트별 실제 기획/아트/개발/QA/버전 문서
   integrations/ # Unreal MCP plugin 같은 외부 실행 backend 연동 기준
@@ -16,7 +16,7 @@ GameDevFramework/
 `framework/`는 특정 게임에 종속되지 않는 공통 자료다.
 
 ```text
-GameDevFramework/framework/
+codex-gamedev-harness/framework/
   README.md
   schemas/
     feature_contract.schema.json
@@ -43,7 +43,7 @@ GameDevFramework/framework/
 예:
 
 ```text
-GameDevFramework/projects/sample_game_001/
+codex-gamedev-harness/projects/sample_game_001/
   README.md
   design/
   systems/
@@ -71,7 +71,7 @@ GameDevFramework/projects/sample_game_001/
 현재 실제 제작 테스트 프로젝트:
 
 ```text
-GameDevFramework/projects/starball_run_001/
+codex-gamedev-harness/projects/starball_run_001/
 ```
 
 ## 제작 흐름
@@ -136,14 +136,14 @@ survival_builder_001
 현재 초안 문서는 아래 샘플 프로젝트에 들어 있다.
 
 ```text
-GameDevFramework/projects/sample_game_001/
+codex-gamedev-harness/projects/sample_game_001/
 ```
 
 이 프로젝트는 실제 게임 이름이 정해지기 전, 프레임워크 문서 구조를 검토하기 위한 샘플이다.
 
 ## 현재 제작 테스트 프로젝트
 
-`GameDevFramework/projects/starball_run_001/`은 별/공 수집, 장애물 회피, 골 도달을 검증하는 소형 플랫폼 게임 프로젝트다.
+`codex-gamedev-harness/projects/starball_run_001/`은 별/공 수집, 장애물 회피, 골 도달을 검증하는 소형 플랫폼 게임 프로젝트다.
 
 ## GameDevMCPPlugin 연동
 

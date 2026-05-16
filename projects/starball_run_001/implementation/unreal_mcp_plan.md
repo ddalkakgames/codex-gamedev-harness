@@ -11,7 +11,7 @@
 1. MCP native HTTP 연결 확인
 2. 현재 에디터 월드 확인
 3. 기존 수집물/발판 에셋 경로 검증
-4. `GameDevFramework/StarballRun/FirstPlayable` 폴더에 테스트 액터 배치
+4. `codex-gamedev-harness/StarballRun/FirstPlayable` 폴더에 테스트 액터 배치
 5. 맵 체크 실행
 6. 결과를 이 문서에 기록
 
