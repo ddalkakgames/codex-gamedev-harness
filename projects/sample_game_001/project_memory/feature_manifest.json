@@ -1,0 +1,6 @@
+{
+  "schema_version": "0.1.0",
+  "updated_at": "2026-05-04",
+  "policy": "Feature/work item entries are created only after a GDD system component is decomposed into production requirements.",
+  "features": []
+}

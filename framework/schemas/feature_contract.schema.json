@@ -1,0 +1,442 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gamedevmcp.local/schemas/feature_contract.schema.json",
+  "title": "GameDevFramework Feature Contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "feature_id",
+    "feature_name",
+    "feature_type",
+    "status",
+    "source_trace",
+    "source_request",
+    "intent",
+    "discipline_specs",
+    "task_graph",
+    "validation_spec",
+    "touched_assets",
+    "rollback_plan",
+    "reports"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "feature_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*_[0-9]{3}$"
+    },
+    "feature_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "feature_type": {
+      "type": "string",
+      "enum": [
+        "system_component",
+        "gameplay_feature",
+        "content_feature",
+        "ui_feature",
+        "art_asset",
+        "engineering_task",
+        "qa_scenario",
+        "other"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "requested",
+        "contract_drafted",
+        "contract_reviewed",
+        "implementation_planned",
+        "applied",
+        "validation_failed",
+        "validated",
+        "reported",
+        "deferred"
+      ]
+    },
+    "source_request": {
+      "type": "string"
+    },
+    "source_trace": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "design_principles",
+        "system_id",
+        "system_component_id",
+        "target_slice",
+        "target_version"
+      ],
+      "properties": {
+        "design_principles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "system_id": {
+          "type": "string"
+        },
+        "system_component_id": {
+          "type": "string"
+        },
+        "target_slice": {
+          "type": "string"
+        },
+        "target_version": {
+          "type": "string"
+        },
+        "traceability_matrix_row": {
+          "type": "string"
+        }
+      }
+    },
+    "intent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "player_experience",
+        "gameplay_purpose",
+        "success_criteria"
+      ],
+      "properties": {
+        "player_experience": {
+          "type": "string"
+        },
+        "gameplay_purpose": {
+          "type": "string"
+        },
+        "success_criteria": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "non_goals": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        }
+      }
+    },
+    "discipline_specs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "design",
+        "art",
+        "engineering",
+        "level",
+        "ux",
+        "qa",
+        "production"
+      ],
+      "properties": {
+        "design": {
+          "$ref": "#/$defs/discipline_spec"
+        },
+        "art": {
+          "$ref": "#/$defs/discipline_spec"
+        },
+        "engineering": {
+          "$ref": "#/$defs/discipline_spec"
+        },
+        "level": {
+          "$ref": "#/$defs/discipline_spec"
+        },
+        "ux": {
+          "$ref": "#/$defs/discipline_spec"
+        },
+        "qa": {
+          "$ref": "#/$defs/discipline_spec"
+        },
+        "production": {
+          "$ref": "#/$defs/discipline_spec"
+        }
+      }
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/dependency"
+      },
+      "default": []
+    },
+    "task_graph": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/task"
+      }
+    },
+    "validation_spec": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/validation_check"
+      }
+    },
+    "touched_assets": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/asset_ref"
+      }
+    },
+    "rollback_plan": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "strategy",
+        "reversible",
+        "steps"
+      ],
+      "properties": {
+        "strategy": {
+          "type": "string"
+        },
+        "reversible": {
+          "type": "boolean"
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "reports": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "implementation_report",
+        "validation_report"
+      ],
+      "properties": {
+        "implementation_report": {
+          "type": "string"
+        },
+        "validation_report": {
+          "type": "string"
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": {
+        "type": [
+          "string",
+          "number",
+          "boolean",
+          "null"
+        ]
+      },
+      "default": {}
+    }
+  },
+  "$defs": {
+    "discipline_spec": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "summary",
+        "requirements"
+      ],
+      "properties": {
+        "summary": {
+          "type": "string"
+        },
+        "requirements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "risks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        }
+      }
+    },
+    "dependency": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "name",
+        "status"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "available",
+            "planned",
+            "missing",
+            "optional"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "task": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "owner",
+        "summary",
+        "status"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "owner": {
+          "type": "string",
+          "enum": [
+            "design",
+            "art",
+            "engineering",
+            "level",
+            "ux",
+            "qa",
+            "production"
+          ]
+        },
+        "summary": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "pending",
+            "in_progress",
+            "completed",
+            "blocked",
+            "skipped"
+          ]
+        },
+        "depends_on": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "tool_hints": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        }
+      }
+    },
+    "validation_check": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "kind",
+        "description",
+        "status"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "pending",
+            "passed",
+            "failed",
+            "blocked",
+            "skipped"
+          ]
+        },
+        "tool_hints": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        }
+      }
+    },
+    "asset_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "asset_path",
+        "asset_type",
+        "operation",
+        "ownership",
+        "stage"
+      ],
+      "properties": {
+        "asset_path": {
+          "type": "string"
+        },
+        "asset_type": {
+          "type": "string"
+        },
+        "operation": {
+          "type": "string",
+          "enum": [
+            "create",
+            "modify",
+            "delete",
+            "reference",
+            "spawn"
+          ]
+        },
+        "ownership": {
+          "type": "string",
+          "enum": [
+            "owned",
+            "referenced",
+            "generated_proxy",
+            "final_dependency"
+          ]
+        },
+        "stage": {
+          "type": "string",
+          "enum": [
+            "planned",
+            "applied",
+            "validated",
+            "failed",
+            "deferred"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

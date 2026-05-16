@@ -1,0 +1,26 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Python / tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Local temp / generated scratch
+tmp/
+*.tmp
+*.log
+
+# Unreal local/generated output, if a project is ever placed here temporarily
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+
