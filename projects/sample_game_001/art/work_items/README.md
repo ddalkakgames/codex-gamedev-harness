@@ -1,3 +1,3 @@
-# 아트 작업 항목
+# Art Work Items
 
-아트 전용 작업 단위와 상태를 관리한다.
+This sample folder is reserved for art work items documents in a real project.

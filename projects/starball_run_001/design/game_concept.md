@@ -1,41 +1,31 @@
-# 게임 콘셉트
+# Game Concept
 
-## 제목
+## Working Title
 
-별공 런
+Starball Run
 
-## 장르
+## One-Line Pitch
 
-짧은 스테이지 기반 2.5D 플랫폼 액션.
+A compact 2.5D platform game where a small star-powered character collects star shards and energy orbs while navigating moving platforms, hazards, and a final goal gate.
 
-## 핵심 판타지
+## Player Fantasy
 
-작은 별 수리공이 무너지는 천문 공방을 달리며 흩어진 별 조각과 에너지 공을 회수하고, 꺼져가는 골 게이트를 다시 밝힌다.
+The player feels like a nimble little star traveler running across a bright celestial workshop, reading the path through collectible trails and taking optional risks for better rewards.
 
-## 플레이어 경험
+## Target Experience
 
-- 이동과 점프로 간단히 조작한다.
-- 별 조각은 경로 학습과 보상감을 만든다.
-- 에너지 공은 위험한 경로에 배치되어 도전 선택지를 만든다.
-- 장애물은 암기보다 관찰과 타이밍으로 피하게 만든다.
-- 골 게이트에 도달하면 현재 수집량과 클리어 시간이 요약된다.
+| Topic | Decision |
+|---|---|
+| Genre | Short-session 2.5D platformer |
+| Camera | Side-view / 2.5D |
+| Session length | 30-60 seconds per stage |
+| Primary actions | Move, jump, collect, avoid, retry |
+| Primary emotion | Light, readable, replayable challenge |
 
-## 첫 버전 범위
+## Core Promise
 
-첫 플레이어블은 하나의 짧은 스테이지로 제한한다.
+The player should always understand where to go, what is rewarding, what is dangerous, and why retrying can improve the result.
 
-- 시작 지점 1개
-- 기본 발판 경로
-- 별 조각 10개 내외
-- 에너지 공 3개 내외
-- 단순 장애물 3종
-- 골 게이트 1개
-- 성공/실패 판정
+## First Playable Proof
 
-## 제외 범위
-
-- 장기 성장 시스템
-- 전투 시스템
-- 온라인 기능
-- 복잡한 보스전
-- 외부 IP 캐릭터/연출 재현
+The first playable version must prove that a short course with collectibles, a hazard, a moving platform, and a goal gate can create a readable replay loop.

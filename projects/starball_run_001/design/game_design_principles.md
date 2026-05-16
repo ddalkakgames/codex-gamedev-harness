@@ -1,25 +1,26 @@
-# 게임 설계 원칙
+# Game Design Principles
 
-## 1. 목표는 항상 화면 안에서 이해된다
+## 1. Read the Path Through Rewards
 
-플레이어는 별, 공, 장애물, 골 게이트를 보고 다음 행동을 예측할 수 있어야 한다.
+Star shards should guide the main route. The player should be able to follow the collectible line without extra explanation.
 
-## 2. 위험한 선택지는 더 큰 보상을 준다
+## 2. Optional Risk Creates Better Reward
 
-기본 클리어 경로는 안정적이어야 하고, 높은 점수를 위한 별/공은 조금 더 위험한 위치에 둔다.
+Energy orbs should appear in more dangerous or skill-testing positions. They should feel more valuable than normal star shards.
 
-## 3. 실패 원인은 즉시 납득되어야 한다
+## 3. Failure Must Be Understandable
 
-피격, 추락, 시간 초과는 명확한 시각/음향 피드백으로 전달한다.
+Hazards, falling, and time pressure must communicate why the player failed. The player should immediately understand what to change on the next attempt.
 
-## 4. 첫 스테이지는 60초 안에 끝난다
+## 4. Small Stages, Fast Retry
 
-테스트와 반복 제작을 빠르게 하기 위해 v0.2 첫 플레이어블은 30~60초 분량으로 제한한다.
+The game should support short stages and repeated attempts. Completion time and collection score should create improvement pressure.
 
-## 5. 기능은 작게 완성하고 검증한다
+## Production Test
 
-수집물 하나, 장애물 하나, 골 게이트 하나가 실제 플레이에서 동작해야 다음 기능을 추가한다.
+Every new feature should answer at least one of these questions:
 
-## 6. AI 작업 단위는 산출물과 검증 기준을 같이 가진다
-
-각 작업은 “무엇을 만든다”와 “어떻게 완료를 판정한다”를 함께 기록한다.
+- Does it make the route more readable?
+- Does it create a meaningful risk/reward decision?
+- Does it make success or failure easier to understand?
+- Does it improve replay motivation?

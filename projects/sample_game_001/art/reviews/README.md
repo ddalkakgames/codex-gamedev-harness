@@ -1,3 +1,3 @@
-# 아트 리뷰
+# Art Reviews
 
-컨셉 이미지와 에셋 검토 결과를 기록한다.
+This sample folder is reserved for art reviews documents in a real project.

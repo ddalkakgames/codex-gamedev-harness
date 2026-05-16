@@ -1,57 +1,26 @@
-# 아트 방향
+# Sample Art Direction
 
-상태: 초안
-목적: 게임 컨셉과 게임 설계 원칙을 시각/청각 산출물 기준으로 변환한다.
+Status: template sample.
 
-## 출처
+## Purpose
 
-- 게임 컨셉: `../../design/game_concept.md`
-- 게임 설계 원칙: `../../design/game_design_principles.md`
-- 게임디자인 문서: `../../design/game_design_document.md`
+This document shows the expected shape of an art direction file. Replace this content with project-specific decisions once a real game concept is selected.
 
-## 시각적 약속
+## Visual Goals
 
-플레이어가 첫 화면에서 어떤 게임이라고 느껴야 하는가?
+| Topic | Sample Decision |
+|---|---|
+| Readability | Gameplay-critical objects must stand out from the background |
+| Shape language | Use different silhouettes for player, rewards, hazards, and goals |
+| Palette | Reserve bright/high-contrast colors for gameplay information |
+| Camera distance | Asset detail must read at the expected gameplay camera distance |
 
-미정
+## Image Review Slots
 
-## 가독성 규칙
+| Image | Purpose | Status | Notes |
+|---|---|---|---|
+| TBD | Overall art direction | Pending | Add generated or hand-made references when needed |
 
-아트는 시스템 상태를 읽게 해야 한다.
+## Production Rule
 
-| 게임플레이 상태 | 시각 요구사항 | 사운드/VFX 요구사항 |
-|---|---|---|
-| 행동 가능 | 미정 | 미정 |
-| 위험 / 도전 | 미정 | 미정 |
-| 보상 / 진행 | 미정 | 미정 |
-| 목표 / 완료 | 미정 | 미정 |
-
-## 임시 아트 정책
-
-첫 플레이 가능 버전에서는 최종 아트보다 가독성이 중요하다.
-
-임시 아트는 아래를 만족해야 한다.
-
-- 게임플레이 역할이 구분된다.
-- 크기와 충돌 범위 의도가 읽힌다.
-- 상호작용 가능, 위험, 보상 상태가 구분된다.
-- 최종 아트 작업 지시서로 승격 가능한 요구사항을 남긴다.
-
-## 최종 아트 제작 분류
-
-| 분류 | 예시 | 출처 시스템 |
-|---|---|---|
-| 캐릭터 | 미정 | 미정 |
-| 배경 | 미정 | 미정 |
-| 오브젝트 / 상호작용물 | 미정 | 미정 |
-| 이펙트 | 미정 | 미정 |
-| UI | 미정 | 미정 |
-| 아이콘 / 일러스트 | 미정 | 미정 |
-
-## 열려 있는 질문
-
-- 스타일라이즈드인지 리얼리스틱인지
-- 색상 언어
-- 카메라 거리에서의 가독성 제약
-- 애니메이션 작업량
-- 이펙트 밀도
+Generated images are references for review. Final assets require production work, optimization, licensing/IP checks, and Unreal integration validation.

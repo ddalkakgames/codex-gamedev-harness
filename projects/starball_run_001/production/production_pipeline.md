@@ -1,40 +1,40 @@
-# 제작 파이프라인
+# Production Pipeline
 
-## 1. 기획 확정
+## 1. Design Lock
 
-게임 콘셉트, 게임 설계 원칙, 첫 스테이지 구조를 문서로 고정한다.
+Lock the game concept, design principles, and first-stage structure.
 
-## 2. 시스템 분해
+## 2. System Breakdown
 
-수집, 장애물, 골, 실패/리스폰, 점수/시간을 독립 시스템으로 나눈다.
+Split the game into collection, hazard, goal, failure/respawn, score/time, and retry systems.
 
-## 3. 산출물 요청
+## 3. Output Requests
 
-각 시스템에서 필요한 아트, 블루프린트, 레벨 배치, UI 산출물을 만든다.
+Derive art, Blueprint, level layout, UI, and QA outputs from each system.
 
-## 4. 아트 프리프로덕션
+## 4. Art Preproduction
 
-실전 제작에서는 플레이 검증과 별도로 아트 프리프로덕션을 진행한다. 콘셉트 브리프, 스타일 기준, 에셋 우선순위, Unreal 경로 규칙을 먼저 확정한다.
+Define concept brief, style rules, asset priority, Unreal path rules, and modeling references.
 
-## 5. Gameplay vertical slice 구현
+## 5. Gameplay Vertical Slice
 
-가장 작은 플레이 가능한 코스를 만든다. 모든 기능이 최종 품질일 필요는 없지만, 플레이 루프는 끊기면 안 된다.
+Build the smallest playable course. Asset quality can be rough, but the play loop must not be broken.
 
-## 6. Art vertical slice 구현
+## 6. Art Vertical Slice
 
-한 화면에서 게임의 정체성이 보이도록 대표 전용 에셋을 통합한다. 이 단계는 모든 에셋 완성이 아니라 핵심 판독 요소 교체가 목표다.
+Replace key placeholders with project-specific assets so Starball Run's visual identity is visible on the first screen.
 
-## 7. 검증
+## 7. Validation
 
-맵 체크, 블루프린트 컴파일, 수동 플레이, 재미 검증 질문을 통과해야 다음 버전으로 넘어간다.
+Run map checks, Blueprint compile checks, manual play tests, and design validation questions.
 
-아트가 들어간 뒤에는 다음 항목을 추가로 검증한다.
+Additional art validation:
 
-- 수집물과 장애물이 배경 위에서 구분되는가
-- 충돌 범위와 시각 범위가 납득되는가
-- 골 게이트가 도착지로 보이는가
-- 전용 아트가 조작 가독성을 방해하지 않는가
+- Collectibles and hazards are readable against the background.
+- Collision and visual ranges feel consistent.
+- Goal gate reads as the destination.
+- Art does not hurt control readability.
 
-## 8. 버전 판정
+## 8. Version Decision
 
-각 버전 문서의 완료 기준에 따라 “완성”, “조건부 완성”, “미완성”을 판정한다.
+Use each version document to decide whether the version is complete, conditionally complete, or incomplete.

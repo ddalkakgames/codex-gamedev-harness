@@ -1,51 +1,19 @@
-# UX 설계
+# Sample UX Design
 
-상태: 초안
-목적: 게임의 조작, 정보 전달, 피드백, 화면 흐름을 정의한다.
+## Purpose
 
-## 출처
+Define what the player needs to see, hear, and understand during the first playable slice.
 
-- 게임 컨셉: `../design/game_concept.md`
-- 게임디자인 문서: `../design/game_design_document.md`
-- 시스템 설계: `../systems/`
+## Screens / States
 
-## 플레이어 입력 모델
-
-- 주 입력: 미정
-- 보조 입력: 미정
-- 카메라 조작: 미정
-- 상호작용 방식: 미정
-
-## 피드백 모델
-
-| 사건 | 피드백 | 우선순위 |
+| State | Purpose | First Playable Required? |
 |---|---|---|
-| 플레이어 행동 가능 | 미정 | 미정 |
-| 플레이어 행동 성공 | 미정 | 미정 |
-| 플레이어 행동 실패 | 미정 | 미정 |
-| 위험 또는 피해 발생 | 미정 | 미정 |
-| 보상 또는 진행 획득 | 미정 | 미정 |
-| 목표 완료 | 미정 | 미정 |
+| Start | Orient the player | TBD |
+| Playing | Show goal and feedback | TBD |
+| Success | Confirm completion | TBD |
+| Failure | Explain retry reason | TBD |
 
-## UI 화면
+## Rules
 
-| 화면 | 목적 | 첫 플레이 가능 버전에 필요한가 |
-|---|---|---|
-| HUD | 미정 | 미정 |
-| 안내 문구 | 미정 | 미정 |
-| 결과/목표 피드백 | 미정 | 미정 |
-| 일시정지/메뉴 | 미정 | 아니오 |
-
-## 접근성 기준
-
-- 읽기 쉬운 대비: 미정
-- 입력 재설정: 미정
-- 멀미/카메라 민감도: 미정
-- 자막 또는 사운드 대체 피드백: 미정
-
-## UX 검증
-
-- 플레이어가 다음 행동을 이해한다.
-- 피드백이 기대 시간 안에 나타난다.
-- UI가 중요한 게임플레이를 가리지 않는다.
-- 실패/재시도 상태를 이해할 수 있다.
+- UI should support the core loop, not replace gameplay readability.
+- Immediate feedback is required for player actions, rewards, danger, success, and failure.

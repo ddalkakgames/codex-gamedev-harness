@@ -1,26 +1,12 @@
-# 아트 리뷰
+# Art Reviews
 
-## 목적
+Store art review decisions here.
 
-컨셉 이미지, proxy 에셋, Unreal 적용 화면을 검토한 결과를 보관한다.
+A useful review should include:
 
-리뷰는 “좋다/나쁘다” 감상이 아니라 게임 설계 원칙, 판독성, IP 안전성, 제작 가능성 기준으로 남긴다.
-
-## 리뷰 항목
-
-| 항목 | 질문 |
-|---|---|
-| 게임 컨셉 일치 | 별 수리공, 천문 공방, 플랫폼 이동이라는 정체성이 보이는가 |
-| 판독성 | 플레이어, 발판, 위험, 보상, 골이 즉시 구분되는가 |
-| 실루엣 | 색을 빼도 역할이 구분되는가 |
-| 화면 밀도 | 배경 장식이 플레이 경로를 방해하지 않는가 |
-| 제작 가능성 | v0.3 vertical slice 범위에서 proxy 또는 prototype art로 만들 수 있는가 |
-| IP 안전성 | 기존 상용 게임의 캐릭터, UI, 보스, 스테이지를 직접 연상시키지 않는가 |
-
-## 기록 형식
-
-```text
-YYYY-MM-DD_대상_리뷰.md
-```
-
-리뷰 문서에는 대상 이미지/에셋, 판정, 수정 지시, 다음 작업 항목을 남긴다.
+- reviewed image or asset path
+- decision: accepted, needs revision, rejected, or superseded
+- readability notes
+- collision/scale notes
+- IP safety notes
+- next action

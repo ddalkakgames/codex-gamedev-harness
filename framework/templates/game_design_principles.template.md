@@ -1,21 +1,21 @@
-# 게임 설계 원칙
+# Game Design Principles
 
-상태: 초안
+## Purpose
 
-## 작성 원칙
+This document defines the design rules that should guide every feature decision.
 
-게임 설계 원칙은 실제 의사결정 기준이어야 한다.
+## Principles
 
-## 게임 설계 원칙 목록
-
-| ID | 게임 설계 원칙 | 의미 | 검증 방법 |
-|---|---|---|---|
-| `principle_01` | 미정 | 미정 | 미정 |
-| `principle_02` | 미정 | 미정 | 미정 |
-| `principle_03` | 미정 | 미정 | 미정 |
-
-## 하지 않을 방향
-
-| ID | 하지 않을 방향 | 이유 |
+| Principle | Meaning | Production Test |
 |---|---|---|
-| `anti_01` | 미정 | 미정 |
+| Principle 1 | TBD | TBD |
+| Principle 2 | TBD | TBD |
+| Principle 3 | TBD | TBD |
+
+## Non-Goals
+
+- TBD
+
+## Decision Rule
+
+When two options conflict, choose the option that best supports the player experience promised in `game_concept.md`.

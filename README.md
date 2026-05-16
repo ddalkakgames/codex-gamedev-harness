@@ -1,54 +1,106 @@
 # Codex GameDev Harness
 
-이 디렉터리는 여러 개의 게임 프로젝트를 AI와 함께 운영하기 위한 **AI 게임 스튜디오 운영 프레임워크**를 보관한다.
+**A practical agentic game-development harness for turning game ideas into playable Unreal projects with Codex, generated art, generated 3D assets, GameDevMCP, and real client/server workflows.**
 
-구조는 두 영역으로 나뉜다.
+Codex GameDev Harness is not a collection of prompts. It is a production workflow for using AI agents as a small game team: design, art direction, asset planning, concept visualization, modeling references, 3D asset generation, Unreal Editor automation, implementation planning, validation, and playable build iteration.
+
+The goal is simple:
+
+```text
+idea
+  -> game design
+  -> art direction
+  -> concept images
+  -> modeling references
+  -> 3D asset generation
+  -> Unreal import through GameDevMCP
+  -> gameplay / UI / client / server implementation
+  -> playable validation
+```
+
+## Why This Exists
+
+AI can generate code, images, 3D models, and implementation plans, but game development fails when those outputs are disconnected.
+
+A game needs a loop:
+
+- a concept that defines what the game is
+- design rules that explain why the game is fun
+- systems that turn the concept into play
+- art direction that makes assets coherent
+- asset lists that map directly to engine objects
+- generated references that can become production assets
+- editor automation that imports and wires those assets into the project
+- validation that proves the result is playable
+
+This repo is the harness around that loop.
+
+## What It Harnesses
+
+| Surface | Role |
+|---|---|
+| **Codex** | Agentic planning, document maintenance, implementation work, review, and orchestration |
+| **Image generation** | Concept art, art direction boards, character sheets, gameplay object references, modeling sheets |
+| **3D generation APIs** | Model creation from structured asset briefs and orthographic references |
+| **GameDevMCP** | Unreal Editor automation through MCP tools |
+| **Unreal Engine** | Final asset import, blueprint authoring, level construction, gameplay validation |
+| **Client / server workflows** | Real game code, runtime systems, networking, tooling, and integration plans |
+
+## Core Idea
+
+The harness treats game development as a chain of connected artifacts, not as isolated AI outputs.
+
+```text
+Design document
+  -> System spec
+  -> Feature manifest
+  -> Art direction
+  -> Asset brief
+  -> Concept image
+  -> Orthographic modeling reference
+  -> 3D model
+  -> Unreal asset
+  -> Blueprint / code integration
+  -> Playable slice
+  -> QA result
+```
+
+Each step should leave behind something a human can review and an agent can use.
+
+## Current Example: Starball Run
+
+`projects/starball_run_001/` is the first live test project.
+
+It is a small 2.5D platform game slice about collecting star shards and energy orbs, avoiding hazards, and reaching a goal gate. The project is used to test the full pipeline from game design to Unreal-ready gameplay assets.
+
+![Starball Run concept overview](projects/starball_run_001/art/concepts/images/concept_reference/concept_overview_v002.png)
+
+![Starball Run core gameplay objects](projects/starball_run_001/art/gameplay_objects/images/concept_reference/core_objects_v002.png)
+
+## Repository Structure
 
 ```text
 codex-gamedev-harness/
-  framework/   # 모든 게임 프로젝트가 공유하는 규칙, 템플릿, schema
-  projects/    # 게임 프로젝트별 실제 기획/아트/개발/QA/버전 문서
-  integrations/ # Unreal MCP plugin 같은 외부 실행 backend 연동 기준
+  framework/
+    guides/
+    schemas/
+    templates/
+
+  integrations/
+    gamedevmcp_plugin/
+
+  projects/
+    sample_game_001/
+    starball_run_001/
 ```
 
-## 공통 프레임워크
-
-`framework/`는 특정 게임에 종속되지 않는 공통 자료다.
+## Project Anatomy
 
 ```text
-codex-gamedev-harness/framework/
-  README.md
-  schemas/
-    feature_contract.schema.json
-  templates/
-    game_concept.template.md
-    game_design_principles.template.md
-    game_design_document.template.md
-    system_spec.template.md
-    art_harness_readme.template.md
-    art_direction.template.md
-    concept_brief.template.md
-    art_asset_brief.template.md
-    version.template.md
-    traceability_matrix.template.md
-  guides/
-    new_project.md
-    art_imagegen_workflow.md
-```
-
-## 게임 프로젝트
-
-`projects/<project_id>/`는 특정 게임 하나의 실제 제작 문서다.
-
-예:
-
-```text
-codex-gamedev-harness/projects/sample_game_001/
-  README.md
+projects/<project_id>/
   design/
   systems/
   art/
-    README.md
     direction/
     concepts/
     characters/
@@ -64,89 +116,62 @@ codex-gamedev-harness/projects/sample_game_001/
   production/
   slices/
   versions/
-  work_items/
   project_memory/
 ```
 
-현재 실제 제작 테스트 프로젝트:
+## GameDevMCP Integration
+
+Codex GameDev Harness is designed to work with GameDevMCP as the Unreal execution layer.
 
 ```text
-codex-gamedev-harness/projects/starball_run_001/
+Codex GameDev Harness
+  -> GameDevMCP MCP endpoint
+    -> Unreal Editor
+      -> assets, blueprints, levels, materials, UI, tests
 ```
 
-## 제작 흐름
+The harness defines what should be made. GameDevMCP performs editor-side actions such as asset import, blueprint edits, level placement, inspection, and validation.
 
-각 게임 프로젝트는 아래 흐름을 따른다.
+## What This Is Not
 
-```text
-게임 컨셉
-  ↓
-게임 설계 원칙 / 목표 경험
-  ↓
-핵심 반복 구조 / 장기 반복 구조
-  ↓
-게임디자인 문서
-  ↓
-시스템 설계 문서
-  ↓
-아트 서브 하네스
-  - 아트 방향성
-  - 컨셉 이미지화
-  - 캐릭터/오브젝트/환경/애니메이션/VFX 기준
-  - 에셋 제작 브리프
-  ↓
-제작 작업 분해
-  - 기획 작업
-  - 아트 에셋 작업 지시서
-  - 프로그램 개발 작업
-  - UX 흐름
-  - QA 검증 시나리오
-  ↓
-첫 플레이 가능 버전 계획
-  ↓
-GameDevMCP를 통한 언리얼 구현
-  ↓
-검증 / 플레이테스트
-  ↓
-버전 / 릴리즈 판정
-```
+This is not a one-click game generator.
 
-## 문서와 JSON의 역할
+The point is not to hide game development behind a magic prompt. The point is to make AI-assisted game development inspectable, repeatable, and production-oriented.
 
-사람이 검토하는 기본 문서는 마크다운이다.
+This harness is built around small vertical slices:
 
-JSON은 AI, 스크립트, MCP 도구가 읽기 위한 자동화용 자료다. JSON이 기획 문서의 중심이 되면 사람이 검토하기 어렵고 게임디자인 맥락이 사라진다. 따라서 JSON은 하위 자동화 계층에만 둔다.
+1. define the game intent
+2. define the systems
+3. define the assets
+4. generate references
+5. produce engine-ready assets
+6. import and wire them in Unreal
+7. validate the playable result
+8. expand the slice
 
-## 새 게임 프로젝트 생성 기준
+## Current Status
 
-새 게임을 시작할 때는 `framework/templates/`의 템플릿을 복사해 `projects/<project_id>/` 아래에 만든다.
+Early, active, experimental.
 
-프로젝트 ID 예:
+Already represented in this repository:
 
-```text
-prototype_action_001
-puzzle_adventure_001
-survival_builder_001
-```
+- game design documents
+- art direction documents
+- generated concept images
+- static mesh asset briefs
+- orthographic modeling references
+- GameDevMCP integration planning
+- Unreal-first playable slice planning
 
-자세한 절차는 `framework/guides/new_project.md`를 따른다.
+Next maturity targets:
 
-## 현재 샘플 프로젝트
+- 3D generation API integration
+- generated model import reports
+- automated material and collision setup
+- gameplay Blueprint assembly
+- client/server workflow templates
+- repeatable playable build validation
 
-현재 초안 문서는 아래 샘플 프로젝트에 들어 있다.
+## License
 
-```text
-codex-gamedev-harness/projects/sample_game_001/
-```
-
-이 프로젝트는 실제 게임 이름이 정해지기 전, 프레임워크 문서 구조를 검토하기 위한 샘플이다.
-
-## 현재 제작 테스트 프로젝트
-
-`codex-gamedev-harness/projects/starball_run_001/`은 별/공 수집, 장애물 회피, 골 도달을 검증하는 소형 플랫폼 게임 프로젝트다.
-
-## GameDevMCPPlugin 연동
-
-Unreal Editor 조작은 별도 저장소의 `GameDevMCPPlugin`을 실행 backend로 사용한다.
-
-연동 기준은 `integrations/gamedevmcp_plugin/README.md`에 둔다.
+License has not been finalized yet.

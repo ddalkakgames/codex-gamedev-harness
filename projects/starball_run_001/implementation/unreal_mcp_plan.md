@@ -1,70 +1,71 @@
-# Unreal MCP 적용 계획
+# Unreal MCP Application Plan
 
-## 목표
+## Goal
 
-문서화된 v0.2 첫 플레이어블 요구사항을 TestMcp 프로젝트에 작은 프로토타입으로 적용한다.
+Apply the documented v0.2 first playable requirements to the TestMcp project as a small prototype.
 
-## 1차 적용 방식
+## First Application Method
 
-기존 `Variant_SideScrolling` 템플릿 에셋을 우선 활용한다.
+Use existing `Variant_SideScrolling` template assets first.
 
-1. MCP native HTTP 연결 확인
-2. 현재 에디터 월드 확인
-3. 기존 수집물/발판 에셋 경로 검증
-4. `codex-gamedev-harness/StarballRun/FirstPlayable` 폴더에 테스트 액터 배치
-5. 맵 체크 실행
-6. 결과를 이 문서에 기록
+1. Verify native MCP HTTP connection.
+2. Inspect the current editor world.
+3. Verify candidate collectible/platform asset paths.
+4. Create StarballRun prototype assets under `/Game/StarballRun`.
+5. Place test actors.
+6. Run map check.
+7. Record results here.
 
-## 주의
+## Note
 
-현재 에디터에 열려 있는 맵이 사이드 스크롤링 맵이 아닐 수 있다. 이 경우 1차 배치는 “게임 루프 배치 검증”으로 보고, 실제 첫 플레이어블 맵 고정은 다음 작업에서 진행한다.
+The editor may have a different map open. In that case, the first placement is treated as a loop-placement test, not the final first playable map.
 
-## 적용 로그
+## Application Log
 
-### 2026-05-07 1차 적용
+### 2026-05-07 First Application
 
-MCP native HTTP endpoint 연결을 확인했다.
+MCP native HTTP endpoint connection was verified.
 
 - URL: `http://172.17.32.1:19091/mcp`
-- UE 버전: `5.7.4-51494982+++UE5+Release-5.7`
-- 등록 도구 수: 514
+- UE version: `5.7.4-51494982+++UE5+Release-5.7`
+- Registered tool count: 514
 
-StarballRun 전용 에셋을 TestMcp 로컬 콘텐츠에 생성했다.
+StarballRun prototype assets were created in the local TestMcp project.
 
-| 작업 | 결과 |
+| Task | Result |
 |---|---|
-| `/Game/Variant_SideScrolling/Lvl_SideScrolling` 복제 | `/Game/StarballRun/Maps/Lvl_Starball_FirstPlayable` 생성 |
-| 캐릭터/게임모드/컨트롤러 복제 | `BP_StarballCharacter`, `BP_StarballGameMode`, `BP_StarballPlayerController` 생성 |
-| 수집물/발판 복제 | `BP_StarballCollectible`, `BP_StarballMovingPlatform`, `BP_StarballSoftPlatform` 생성 |
-| 블루프린트 컴파일 | 6개 모두 성공 |
+| Duplicate `/Game/Variant_SideScrolling/Lvl_SideScrolling` | Created `/Game/StarballRun/Maps/Lvl_Starball_FirstPlayable` |
+| Duplicate character/game mode/controller | Created `BP_StarballCharacter`, `BP_StarballGameMode`, `BP_StarballPlayerController` |
+| Duplicate collectible/platform assets | Created `BP_StarballCollectible`, `BP_StarballMovingPlatform`, `BP_StarballSoftPlatform` |
+| Compile Blueprints | 6 Blueprints compiled successfully |
 
-현재 열린 월드는 `/Game/ThirdPerson/Lvl_ThirdPerson`이었다. 이 월드에 검증용 `SBR_*` 액터 19개를 배치했다.
+The currently opened world was `/Game/ThirdPerson/Lvl_ThirdPerson`. Nineteen `SBR_*` validation actors were placed there.
 
-| 분류 | 수량 |
+| Category | Count |
 |---|---:|
 | PlayerStart | 1 |
-| 별 조각 후보 | 10 |
-| 에너지 공 후보 | 3 |
-| 움직이는 발판 | 1 |
-| 소프트 발판 | 1 |
-| lava hazard 후보 | 2 |
-| goal trigger 후보 | 1 |
+| Star shard candidates | 10 |
+| Energy orb candidates | 3 |
+| Moving platform | 1 |
+| Soft platform | 1 |
+| Lava hazard candidates | 2 |
+| Goal trigger candidate | 1 |
 
-`world.validation.map_check` 결과:
+`world.validation.map_check` result:
 
 - actor count: 134
 - error count: 0
 - warning count: 18
 
-경고는 기존 ThirdPerson 월드의 missing root component/duplicate label 경고이며, 1차 StarballRun 배치로 인한 치명 오류는 없다.
+The warnings came from the existing ThirdPerson world and were not critical errors caused by the StarballRun placement.
 
-## 현재 제약
+## Current Constraint
 
-MCP에는 현재 에디터 맵을 특정 맵으로 여는 전용 도구가 없다. 그래서 1차 배치는 현재 열려 있던 ThirdPerson 월드에 들어갔다. 전용 맵 `/Game/StarballRun/Maps/Lvl_Starball_FirstPlayable`을 연 뒤 같은 배치를 고정하는 작업이 다음 단계다.
+The current MCP tool set does not include a dedicated tool for opening a specific editor map. The first placement therefore happened in the currently open ThirdPerson world. The next step is to open `/Game/StarballRun/Maps/Lvl_Starball_FirstPlayable` and lock the same course placement there.
 
-## 다음 작업
+## Next Work
 
-1. 에디터에서 `/Game/StarballRun/Maps/Lvl_Starball_FirstPlayable` 열기
-2. `SBR_*` 코스 배치를 해당 맵 기준으로 재배치
-3. `BP_StarballGoalGate`, `BP_StarballHazard` 전용 로직 구현
-4. 수동 플레이로 시작, 수집, 회피, 클리어 루프 검증
+1. Open `/Game/StarballRun/Maps/Lvl_Starball_FirstPlayable` in the editor.
+2. Re-place the `SBR_*` course actors in that map.
+3. Implement `BP_StarballGoalGate` and `BP_StarballHazard` logic.
+4. Run manual play validation for start, collection, avoidance, clear, and retry.

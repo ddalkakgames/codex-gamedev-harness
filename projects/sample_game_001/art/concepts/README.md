@@ -1,3 +1,3 @@
-# 컨셉
+# Concepts
 
-아트 방향을 이미지와 검토 항목으로 풀어내는 문서를 둔다.
+This sample folder is reserved for concepts documents in a real project.

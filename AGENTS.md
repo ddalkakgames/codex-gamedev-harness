@@ -1,26 +1,19 @@
 # AGENTS.md
 
-## 언어 지침
+## Language
+- Use English for public-facing documentation in this repository.
+- Keep code identifiers, paths, commands, and engine/API names in their original form.
 
-- 이 저장소에서 Codex CLI와 상호작용할 때는 한국어를 기본 언어로 사용한다.
-- 코드/명령어/공식 에러 메시지는 원문을 유지할 수 있지만, 설명은 한국어로 작성한다.
+## Repository Role
+This repository is the public-facing workspace for Codex GameDev Harness: an agentic game-development harness that connects game design, art direction, generated visual references, 3D asset generation, Unreal automation through GameDevMCP, implementation planning, and playable validation.
 
-## 저장소 역할
+## Editing Rules
+- Prefer Markdown for human-reviewed planning and production documents.
+- Use JSON only when automation, schema validation, or machine-readable interchange needs it.
+- Keep public docs inspectable, concise, and understandable to international readers.
+- Do not store private tokens, local secrets, or account-specific credentials in this repo.
 
-- 이 저장소는 AI 기반 게임 제작 운영 프레임워크를 관리한다.
-- `GameDevMCPPlugin`은 Unreal Editor를 조작하는 실행 backend / integration target으로 본다.
-- 이 저장소는 게임 기획, 시스템 설계, 아트 파이프라인, 프로젝트 템플릿, 샘플 프로젝트, 제작/검증 프로세스를 소유한다.
-
-## 문서 기준
-
-- 사람이 검토하는 기본 문서는 Markdown으로 작성한다.
-- JSON은 AI/스크립트/도구 자동화에 필요한 경우에만 사용한다.
-- 새 프로젝트 문서는 `projects/<project_id>/` 아래에 둔다.
-- 공통 템플릿과 가이드는 `framework/` 아래에 둔다.
-
-## Git 작업 기준
-
-- `git commit`과 `git push`는 사용자가 명시적으로 요청한 경우에만 수행한다.
-- 기존 사용자 변경을 임의로 되돌리지 않는다.
-- 대규모 이동/삭제 전에는 대상과 현재 상태를 확인한다.
-
+## Git Policy
+- Commit and push only when explicitly requested.
+- Keep the public `ddalkakgames` history separate from private/internal development history.
+- Public releases should be clean exports, not forks or transfers from private workspaces.

@@ -1,76 +1,29 @@
-# 게임 컨셉 문서
+# Sample Game Concept
 
-상태: 초안
-목적: 게임 제작의 출발점을 정리한다.
+Status: placeholder.
 
-## 한 줄 소개
+## Purpose
 
-미정
+This file demonstrates how to start from game intent before producing systems, art, or implementation tasks.
 
-## 핵심 컨셉
+## Candidate Concept Format
 
-이 게임이 어떤 경험을 제공하는지 3~5문장으로 정의한다.
+| Field | Description |
+|---|---|
+| Working title | TBD |
+| One-line pitch | TBD |
+| Player fantasy | TBD |
+| Core action | TBD |
+| Main obstacle | TBD |
+| Win condition | TBD |
+| First playable proof | TBD |
 
-미정
+## Selection Criteria
 
-## 장르 / 카메라 / 조작
+A concept is ready when it can produce:
 
-- 장르: 미정
-- 카메라: 미정
-- 주 조작 방식: 미정
-- 1회 플레이 길이: 미정
-- 목표 플랫폼: 미정
-
-## 목표 플레이어
-
-- 플레이어 성향: 미정
-- 플레이 동기: 미정
-- 예상 숙련도: 미정
-
-## 플레이어 판타지
-
-플레이어가 이 게임 안에서 어떤 사람이 된다고 느껴야 하는가?
-
-미정
-
-## 핵심 플레이 경험
-
-플레이어가 30초 안에 이해해야 하는 핵심 경험:
-
-미정
-
-## 차별점
-
-이 게임이 같은 장르의 다른 게임과 구분되는 지점은 무엇인가?
-
-- 차별점 1: 미정
-- 차별점 2: 미정
-- 차별점 3: 미정
-
-## 참고작
-
-참고작은 복제 대상이 아니라 의도를 설명하기 위한 비교점이다.
-
-| 참고작 | 가져올 점 | 피할 점 |
-|---|---|---|
-| 미정 | 미정 | 미정 |
-
-## 범위 제한
-
-초기 플레이 가능 버전에서 하지 않을 것:
-
-- 미정
-
-## 첫 플레이 가능 버전에서 증명할 것
-
-1. 미정
-2. 미정
-3. 미정
-
-## 결정 상태
-
-| 결정 항목 | 상태 | 비고 |
-|---|---|---|
-| 게임 컨셉 선택 | 대기 |  |
-| 목표 경험 정의 | 대기 |  |
-| 첫 플레이 가능 버전의 증명 목표 정의 | 대기 |  |
+- a clear player goal
+- a repeatable core loop
+- at least one meaningful challenge
+- required art and engineering outputs
+- a validation scenario for the first playable version

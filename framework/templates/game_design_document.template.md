@@ -1,42 +1,44 @@
-# 게임디자인 문서
+# Game Design Document
 
-상태: 초안
+## Overview
 
-## 게임 개요
+Summarize the game, player goal, session structure, and main challenge.
 
-미정
+## Controls
 
-## 플레이어 경험 목표
+| Input | Action |
+|---|---|
+| TBD | TBD |
 
-- 목표 1: 미정
-- 목표 2: 미정
-- 목표 3: 미정
+## Core Loop
 
-## 핵심 반복 구조
+1. TBD
+2. TBD
+3. TBD
 
-```text
-미정
-```
+## Player Goals
 
-## 장기 반복 구조
-
-```text
-미정
-```
-
-## 게임 시스템
-
-| 시스템 | 목적 | 상태 | 설계 문서 |
-|---|---|---|---|
-| 핵심 반복 구조 | 전체 플레이 반복 구조 | 초안 | `../systems/core_loop.system.md` |
-
-## 콘텐츠 구조
-
-| 콘텐츠 종류 | 역할 | 초기 범위 |
+| Goal | Type | Notes |
 |---|---|---|
-| 미정 | 미정 | 미정 |
+| TBD | Primary | TBD |
 
-## 첫 플레이 가능 버전 후보
+## Systems
 
-- 세로 단면: `../slices/first_playable_slice.md`
-- 버전: `../versions/v0_2_first_playable.md`
+| System | Purpose | Version |
+|---|---|---|
+| TBD | TBD | TBD |
+
+## Win / Fail Conditions
+
+Describe how the player succeeds, fails, retries, and improves.
+
+## First Level or Scenario
+
+Describe the first playable scenario in clear sequence.
+
+## Validation Questions
+
+- Can the player understand the goal quickly?
+- Does the core interaction work without explanation?
+- Is failure readable?
+- Does replay create improvement pressure?

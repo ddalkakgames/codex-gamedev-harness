@@ -1,47 +1,32 @@
-# 수집물, 장애물, 골 시스템
+# Collectibles, Hazards, and Goal System
 
-## 수집물
+## Purpose
 
-### 별 조각
+This system connects route guidance, optional reward, failure pressure, and stage completion.
 
-- 메인 경로 안내 역할을 겸한다.
-- 기본 점수 1점.
-- 플레이어와 오버랩하면 사라지고 점수를 더한다.
+## Collectibles
 
-### 에너지 공
-
-- 보너스 점수 5점.
-- 위험한 위치에 배치한다.
-- v0.2에서는 별 조각과 같은 수집 로직을 사용해도 된다.
-
-## 장애물
-
-### 회전 장애물
-
-- 플레이어와 충돌하면 실패 처리한다.
-- v0.2에서는 회전하는 시각 오브젝트와 박스 충돌 영역으로 구현한다.
-
-### 낙하 영역
-
-- 일정 Z 높이 이하로 떨어지면 실패 처리한다.
-- 레벨 전체에 공통 규칙으로 둔다.
-
-### 움직이는 발판
-
-- 정해진 두 지점을 왕복한다.
-- 처음에는 기존 사이드 스크롤링 템플릿의 moving platform을 활용한다.
-
-## 골 게이트
-
-- 플레이어와 오버랩하면 클리어 처리한다.
-- v0.2에서는 결과 UI 대신 로그와 화면 메시지로 클리어를 확인한다.
-
-## 데이터 항목
-
-| 항목 | 타입 | 설명 |
+| Item | Purpose | Feedback |
 |---|---|---|
-| Score | int | 현재 점수 |
-| StarCount | int | 별 조각 수집 수 |
-| OrbCount | int | 에너지 공 수집 수 |
-| ElapsedTime | float | 플레이 시간 |
-| IsCleared | bool | 클리어 여부 |
+| Star shard | Main route guidance and base score | Gold sparkle / pickup feedback |
+| Energy orb | Optional risk reward | Stronger cyan pulse / bonus feedback |
+
+## Hazards
+
+Hazards must show their danger area clearly. The visible form and collision volume should feel consistent.
+
+| Hazard | Purpose | Feedback |
+|---|---|---|
+| Hazard device | Timing and positioning challenge | Orange warning ring and hot core |
+| Pit / fall area | Jump accuracy challenge | Clear drop or out-of-bounds reset |
+
+## Goal
+
+The goal gate marks the stage endpoint. It must read as a destination from a distance and trigger a clear result when entered.
+
+## Validation
+
+- The star shard trail leads toward the goal.
+- Energy orbs are visibly more valuable than star shards.
+- Hazards are readable before failure.
+- Goal collision matches the visible gate area.

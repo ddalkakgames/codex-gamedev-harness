@@ -1,66 +1,66 @@
-# 게임 디자인 문서
+# Game Design Document
 
-## 게임 개요
+## Overview
 
-별공 런은 짧은 코스를 반복 플레이하며 수집 점수와 클리어 시간을 개선하는 플랫폼 게임이다.
+Starball Run is a short-course platform game about improving collection score and clear time across repeated attempts.
 
-## 조작
+## Controls
 
-| 입력 | 동작 |
+| Input | Action |
 |---|---|
-| 좌/우 이동 | 캐릭터 이동 |
-| 점프 | 발판 이동, 장애물 회피 |
-| 리트라이 | 실패 또는 클리어 후 같은 스테이지 재시작 |
+| Move left/right | Move the character |
+| Jump | Traverse platforms and avoid hazards |
+| Retry | Restart after failure or clear |
 
-## 핵심 루프
+## Core Loop
 
-1. 스테이지 시작
-2. 경로 확인
-3. 별 조각과 에너지 공 수집
-4. 장애물 회피
-5. 골 게이트 도달
-6. 결과 확인
-7. 더 좋은 기록을 위해 재도전
+1. Start the stage.
+2. Read the route.
+3. Collect star shards and energy orbs.
+4. Avoid hazards.
+5. Reach the goal gate.
+6. Review the result.
+7. Retry for a better score or time.
 
-## 수집물
+## Collectibles
 
-| 이름 | 역할 | 배치 원칙 |
+| Name | Role | Placement Rule |
 |---|---|---|
-| 별 조각 | 기본 점수 | 메인 경로에 리듬감 있게 배치 |
-| 에너지 공 | 보너스 점수 | 위험한 점프 경로나 장애물 근처에 배치 |
+| Star shard | Basic score and route guidance | Placed along the main route with rhythmic spacing |
+| Energy orb | Bonus score | Placed near risky jumps or hazards |
 
-## 장애물
+## Hazards
 
-| 이름 | 역할 | v0.2 구현 방식 |
+| Name | Role | v0.2 Implementation |
 |---|---|---|
-| 회전 장애물 | 타이밍 회피 | 고정 위치에서 회전하는 위험 영역 |
-| 낙하 구간 | 점프 정확도 테스트 | 바닥이 없는 구간 |
-| 움직이는 발판 | 이동 타이밍 테스트 | 정해진 구간을 왕복 |
+| Rotating hazard | Timing avoidance | Fixed-position rotating danger volume |
+| Pit / fall zone | Jump accuracy test | Gap or out-of-bounds failure area |
+| Moving platform | Timing traversal | Platform moving along a defined route |
 
-## 클리어 조건
+## Clear Condition
 
-골 게이트에 도달하면 클리어한다. v0.2에서는 수집물 전부를 요구하지 않고, v0.3부터 선택 목표로 확장한다.
+The stage clears when the player reaches the goal gate. v0.2 does not require all collectibles. v0.3 can add optional completion goals.
 
-## 실패 조건
+## Failure Conditions
 
-- 낙하 영역 진입
-- 장애물 충돌
-- 제한 시간 초과
+- Falling into a fail area
+- Colliding with a hazard
+- Running out of time
 
-v0.2에서는 낙하/충돌 시 시작 지점으로 리셋하는 방식까지 허용한다. v0.3에서 실패 UI와 리트라이 화면을 추가한다.
+v0.2 may reset the player to the start after a fall or collision. v0.3 adds failure UI and retry flow.
 
-## 첫 스테이지 구조
+## First Stage Structure
 
-1. 안전한 시작 구간
-2. 기본 점프와 별 조각 수집 구간
-3. 움직이는 발판 구간
-4. 장애물 옆 에너지 공 선택 구간
-5. 골 게이트 직전 짧은 복합 구간
+1. Safe start area
+2. Basic jump and star shard collection area
+3. Moving platform area
+4. Optional energy orb near a hazard
+5. Short combined challenge before the goal gate
 
-## 재미 검증 질문
+## Fun Validation Questions
 
-- 플레이어가 첫 10초 안에 목표를 이해하는가?
-- 별 조각을 따라가면 자연스럽게 메인 경로를 이동하는가?
-- 에너지 공을 먹기 위해 위험을 감수할 이유가 있는가?
-- 실패했을 때 원인을 설명하지 않아도 알 수 있는가?
-- 3회 반복 플레이 후 기록 개선 욕구가 생기는가?
+- Does the player understand the goal within the first 10 seconds?
+- Does following star shards naturally lead to the goal?
+- Is there a reason to risk grabbing an energy orb?
+- Is failure readable without explanation?
+- Does the player want to retry after three attempts?

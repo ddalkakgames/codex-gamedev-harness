@@ -1,51 +1,9 @@
-# 제작 파이프라인
+# Sample Production Pipeline
 
-상태: 초안
-목적: 게임디자인에서 아트, 개발, UX, QA 작업이 어떻게 파생되는지 정의한다.
-
-## 전체 흐름
-
-```text
-게임 컨셉
-  -> 게임 설계 원칙
-  -> 게임디자인 문서
-  -> 시스템 설계
-  -> 시스템 구성요소
-  -> 제작 요구사항
-  -> 작업 항목
-  -> 언리얼 구현
-  -> 검증
-  -> 버전 판정
-```
-
-## 작업 분해 규칙
-
-시스템 구성요소 하나는 최소한 아래 산출물을 만든다.
-
-| 산출물 | 질문 |
-|---|---|
-| 기획 작업 | 규칙과 수치는 무엇인가? |
-| 아트 지시서 | 플레이어가 무엇을 어떻게 읽어야 하는가? |
-| 개발 작업 | 언리얼에서 어떤 구조로 구현되는가? |
-| UX 흐름 | 플레이어에게 어떤 피드백이 필요한가? |
-| QA 시나리오 | 의도대로 동작하는지 어떻게 검증하는가? |
-
-## 검토 단계
-
-| 단계 | 시점 | 목적 |
-|---|---|---|
-| 컨셉 검토 | GDD 작성 전 | 만들 게임의 방향 승인 |
-| GDD 검토 | 시스템 분해 전 | 시스템 목록과 핵심 반복 구조 승인 |
-| 제작 분해 검토 | 언리얼 변경 전 | 분야별 산출물 연결 확인 |
-| 세로 단면 범위 검토 | 구현 작업 전 | 첫 플레이 가능 범위 고정 |
-| 검증 검토 | 구현 후 | 플레이 가능 약속 충족 판단 |
-
-## AI 작업 규칙
-
-AI는 시스템 설계 없이 바로 언리얼 에셋을 만들지 않는다.
-
-예외:
-
-- MCP 도구 smoke test
-- 격리된 기술 실험
-- 사용자가 명시적으로 요청한 단발성 에디터 조작
+1. Define the game concept.
+2. Define design principles and the core loop.
+3. Break the loop into systems.
+4. Derive art, engineering, UX, and QA outputs.
+5. Build the smallest playable vertical slice.
+6. Validate in Unreal.
+7. Decide whether the version is complete, conditional, or incomplete.

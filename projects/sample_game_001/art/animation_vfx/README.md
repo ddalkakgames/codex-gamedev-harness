@@ -1,3 +1,3 @@
-# 애니메이션 / VFX
+# Animation and VFX
 
-캐릭터 움직임, 피드백, 이펙트 기준을 둔다.
+This sample folder is reserved for animation and vfx documents in a real project.

@@ -1,40 +1,31 @@
-# 검증 전략
+# Validation Strategy
 
-## v0.2 수동 검증
+## Purpose
 
-| 항목 | 통과 기준 |
-|---|---|
-| 시작 | 플레이어가 의도한 시작 위치에서 시작한다 |
-| 이동 | 골까지 이동 가능한 경로가 있다 |
-| 수집 | 별/공이 플레이어 오버랩으로 사라지거나 카운트된다 |
-| 장애물 | 장애물 충돌 또는 낙하가 실패로 처리된다 |
-| 클리어 | 골 게이트 도달 시 클리어가 확인된다 |
-| 반복 | 실패 후 다시 시도할 수 있다 |
+Validation proves that each Starball Run version is playable, readable, and aligned with the design goals.
 
-## 자동/도구 검증
+## v0.2 Checks
 
-- MCP smoke test로 native HTTP MCP 연결 확인
-- `world.validation.map_check`로 레벨 오류 확인
-- 블루프린트 변경 시 compile 결과 확인
-- 전용 아트 교체 후 충돌/오버랩 동작 재확인
+| Check | Purpose | Method |
+|---|---|---|
+| MCP smoke test | Confirm Unreal automation access | `tools/list` and basic tool call |
+| Blueprint compile | Catch broken Blueprint assets | GameDevMCP or Unreal Editor |
+| Map check | Catch level errors | `world.validation.map_check` |
+| Manual play test | Validate the full loop | Human play or guided test |
+| Design questions | Validate intended experience | Checklist review |
 
-## 아트 적용 검증
+## Manual Play Questions
 
-| 항목 | 통과 기준 |
-|---|---|
-| 플레이어 판독 | 배경 위에서 위치와 방향이 보인다 |
-| 수집물 판독 | 별 조각과 에너지 공이 서로 구분된다 |
-| 장애물 판독 | 닿으면 위험한 범위가 예측된다 |
-| 골 판독 | 설명 없이 도착지로 보인다 |
-| 충돌 일치 | 시각 메시와 실제 충돌 범위가 크게 어긋나지 않는다 |
-| 성능 | 전용 아트 적용 후 에디터 플레이가 눈에 띄게 끊기지 않는다 |
+- Can the player identify the route quickly?
+- Can the player collect at least one star shard?
+- Is the energy orb clearly optional and more valuable?
+- Is hazard failure readable?
+- Does the goal gate read as the endpoint?
+- Does retry work without resetting the editor manually?
 
-## 재미 검증
+## Art Validation Questions
 
-내부 플레이 5회 기준으로 다음을 기록한다.
-
-- 평균 클리어 시간
-- 첫 시도 실패 위치
-- 수집물을 놓치는 위치
-- 장애물이 불공정하게 느껴지는 위치
-- 재도전 의향
+- Are collectible, hazard, goal, and platform silhouettes distinct?
+- Does VFX reinforce state without hiding collision?
+- Does environment detail stay behind gameplay readability?
+- Are generated assets safe from obvious IP copying?

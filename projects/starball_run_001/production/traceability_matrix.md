@@ -1,10 +1,10 @@
-# 추적표
+# Traceability Matrix
 
-| 기획 의도 | 시스템 | 아트 산출물 | 개발 산출물 | 검증 |
+| Design Intent | System | Art Output | Engineering Output | Validation |
 |---|---|---|---|---|
-| 별을 따라가면 길을 알 수 있다 | 별 조각 수집 | 전용 별 조각 에셋, 발광 머티리얼 | 수집물 액터 | 별을 따라 골까지 이동 가능 |
-| 위험한 길은 더 보상이 크다 | 에너지 공 | 전용 에너지 공 에셋, 보너스 VFX | 보너스 수집물 | 위험 경로에 보상이 배치됨 |
-| 타이밍을 보고 장애물을 피한다 | 회전 장애물 | 전용 위험 장애물 에셋, 위험 범위 표시 | hazard 액터 | 충돌 시 실패 처리 |
-| 짧게 반복한다 | 핵심 루프 | 결과 메시지 | 타이머/리트라이 | 60초 안에 클리어 가능 |
-| 목표가 명확하다 | 골 시스템 | 전용 골 게이트 에셋, 클리어 VFX | goal 액터 | 골 도달 시 클리어 |
-| 게임 정체성이 보인다 | 아트 vertical slice | 플레이어, 플랫폼, 배경 대표 에셋 | 에셋 교체 가능한 BP 구조 | 첫 화면에서 템플릿 게임처럼 보이지 않음 |
+| Star shards guide the path | Star shard collection | Star shard mesh and glow material | Pickup actor | Player can follow shards to the goal |
+| Riskier routes give better reward | Energy orb collection | Energy orb mesh and bonus VFX | Bonus pickup actor | Energy orbs are placed near risk |
+| Player times hazard avoidance | Hazard system | Hazard device and warning range | Hazard actor | Collision causes failure |
+| Short repeated play | Core loop | Result message and feedback | Timer/retry logic | Stage can be cleared in under 60 seconds |
+| Goal is obvious | Goal system | Goal gate mesh and clear VFX | Goal actor | Overlap triggers clear |
+| Game identity is visible | Art vertical slice | Character, platform, background assets | Replaceable Blueprint structure | First screen does not look like a template-only game |

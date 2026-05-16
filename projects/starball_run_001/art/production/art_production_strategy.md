@@ -1,87 +1,30 @@
-# 아트 전용 제작 전략
+# Art Production Strategy
 
-## 목적
+## Purpose
 
-`별공 런`은 실전 제작 연습 프로젝트이므로, 기존 템플릿 에셋만으로 끝내지 않는다. 플레이 검증용 proxy와 실제 게임 정체성을 만드는 전용 아트를 분리해서 병렬로 진행한다.
+Starball Run is a practical test of the full AI-assisted asset pipeline: concept references, modeling references, generated 3D assets, Unreal import, and playable validation.
 
-## 핵심 전략
+## Strategy
 
-v0.2에서는 플레이 루프를 빠르게 검증한다. 동시에 아트 프리프로덕션을 시작해 v0.3에서 “아트 vertical slice”를 만든다.
+1. Use template assets only for v0.2 playability validation.
+2. Define Starball Run-specific visual direction in documents.
+3. Generate concept images for review.
+4. Split gameplay objects into real static mesh targets.
+5. Generate orthographic modeling references for each mesh.
+6. Produce or generate 3D models from approved references.
+7. Import models into Unreal through GameDevMCP.
+8. Validate readability, collision expectations, and gameplay integration.
 
-아트 vertical slice는 모든 에셋을 완성하는 단계가 아니다. 한 화면 안에서 게임의 방향이 보이도록 플레이어, 수집물, 장애물, 골, 발판, 배경의 최소 대표 세트를 전용 아트로 교체하는 단계다.
+## Production Priorities
 
-## 제작 단계
-
-| 단계 | 이름 | 목적 | 산출물 |
-|---|---|---|---|
-| A0 | 아트 방향 고정 | 표절 없이 독자적 시각 방향 확정 | 키워드, 색상, 실루엣 기준 |
-| A1 | 콘셉트 초안 | 주요 오브젝트의 형태 탐색 | 캐릭터/수집물/장애물/게이트 콘셉트 |
-| A2 | 제작 브리프 | 실제 제작 가능한 단위로 분해 | 에셋별 크기, 용도, 충돌 기준 |
-| A3 | Proxy 교체 | 템플릿 에셋을 전용 형태로 교체 | 단순 메시/머티리얼/임시 VFX |
-| A4 | 아트 vertical slice | 한 화면의 완성 방향 검증 | 대표 에셋 세트와 배경 키트 |
-| A5 | 릴리즈 아트 확장 | 스테이지 수에 맞게 양산 | 변형 에셋, 이펙트, UI 아이콘 |
-
-## 에셋 품질 단계
-
-| 단계 | 설명 | 사용 버전 |
+| Priority | Asset Group | Reason |
 |---|---|---|
-| Proxy | 크기와 충돌만 맞춘 임시 에셋 | v0.2 |
-| Prototype Art | 형태와 색이 들어간 전용 임시 에셋 | v0.3 |
-| Slice Art | 첫 화면 품질 기준을 만족하는 대표 에셋 | v0.3 |
-| Release Art | 반복 사용과 최종 연출까지 고려한 완성 에셋 | v0.5 이상 |
+| 1 | Star shard, energy orb, hazard, goal gate | Core loop readability |
+| 2 | Platform kit, moving platform, lift system | Traversal readability |
+| 3 | Lumi proxy character | Player identity |
+| 4 | Environment rough kit | Visual identity without hurting gameplay readability |
+| 5 | VFX and UI polish | Feedback and replay motivation |
 
-## 우선순위
+## Review Rule
 
-1. 플레이어 실루엣: 조작 주체와 게임 정체성을 먼저 고정한다.
-2. 수집물과 장애물: 게임 규칙 판독에 직접 영향을 준다.
-3. 골 게이트: 플레이 목표를 분명하게 만든다.
-4. 플랫폼 키트: 코스 구성 품질을 올린다.
-5. 배경: 마지막에 밀도를 올린다.
-
-## 제작 방식
-
-### 1. 콘셉트
-
-- 사람이 검토하는 콘셉트 문서는 Markdown으로 작성한다.
-- 이미지 생성 AI를 쓸 수 있지만, 결과물은 최종 아트가 아니라 방향 탐색 자료로만 취급한다.
-- `../concepts/concept_brief.md`에 생성 이미지와 검토 결과를 남긴다.
-- imagegen 프롬프트 자체는 사용자 검토 문서에 노출하지 않는다.
-- 선택한 이미지는 해당 카테고리의 `images/<진행단계>/` 아래에 저장하고 Markdown 이미지 링크로 포함한다.
-- 기존 게임의 캐릭터, 보스, UI, 고유 실루엣을 직접 참조하지 않는다.
-
-### 2. 모델링/텍스처
-
-- 첫 전용 에셋은 low-poly 또는 단순 stylized 형태로 제작한다.
-- 복잡한 캐릭터 애니메이션보다 판독 가능한 실루엣과 충돌 범위를 먼저 맞춘다.
-- 수집물과 위험물은 발광 머티리얼과 단순 VFX를 우선한다.
-
-### 3. 언리얼 통합
-
-- 전용 에셋은 `/Game/StarballRun/Art` 아래에 둔다.
-- 블루프린트의 충돌/게임플레이 로직은 에셋 교체와 분리한다.
-- 에셋 교체 후에는 같은 맵에서 플레이 검증을 다시 한다.
-
-## 판독성 기준
-
-| 요소 | 통과 기준 |
-|---|---|
-| 플레이어 | 배경과 겹쳐도 위치가 보임 |
-| 별 조각 | 기본 경로 안내물로 읽힘 |
-| 에너지 공 | 별보다 더 가치 있는 보상으로 보임 |
-| 장애물 | 위험 범위가 시각적으로 예측됨 |
-| 골 게이트 | 도착지임을 설명 없이 알 수 있음 |
-
-## IP 안전 기준
-
-- 기존 상용 게임의 이름, 캐릭터 복장, 보스 콘셉트, UI 레이아웃을 복제하지 않는다.
-- 참고는 장르 구조와 플레이 감각으로 제한한다.
-- 내부 문서에서도 외부 IP명은 비교 설명용으로만 쓰고, 실제 에셋명과 구현명에는 쓰지 않는다.
-
-## v0.3 아트 vertical slice 완료 기준
-
-- 루미가 별 자체가 아니라 작은 별 수리공으로 보인다.
-- 첫 스테이지 한 화면에 전용 수집물, 장애물, 발판, 골 게이트가 모두 보인다.
-- 플레이어가 이동할 때 전용 캐릭터 실루엣이 확인된다.
-- 수집물/장애물/골이 색상과 형태로 구분된다.
-- 템플릿 에셋이 남아 있더라도 핵심 플레이 판독 요소는 StarballRun 전용 아트로 교체된다.
-- 맵 체크와 수동 플레이 검증을 다시 통과한다.
+An asset is not accepted just because a generated image looks good. It must also work in gameplay camera, collision, scale, material, and Blueprint context.

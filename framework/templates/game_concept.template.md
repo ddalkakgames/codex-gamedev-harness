@@ -1,49 +1,35 @@
-# 게임 컨셉 문서
+# Game Concept
 
-상태: 초안
+## Working Title
 
-## 한 줄 소개
+TBD
 
-미정
+## One-Line Pitch
 
-## 핵심 컨셉
+Describe the game in one sentence.
 
-미정
+## Player Fantasy
 
-## 장르 / 카메라 / 조작
+What should the player feel like they are doing or becoming?
 
-- 장르: 미정
-- 카메라: 미정
-- 주 조작 방식: 미정
-- 1회 플레이 길이: 미정
-- 목표 플랫폼: 미정
+## Target Experience
 
-## 목표 플레이어
+| Topic | Decision |
+|---|---|
+| Genre | TBD |
+| Camera / perspective | TBD |
+| Session length | TBD |
+| Main input style | TBD |
+| Primary emotion | TBD |
 
-- 플레이어 성향: 미정
-- 플레이 동기: 미정
-- 예상 숙련도: 미정
+## Core Promise
 
-## 플레이어 판타지
+State the main promise the game must keep.
 
-미정
+## Reference Boundaries
 
-## 핵심 플레이 경험
+List inspirations at the genre/mechanic level. Do not copy names, characters, maps, art direction, or unique rules from existing games.
 
-미정
+## First Playable Proof
 
-## 차별점
-
-- 차별점 1: 미정
-- 차별점 2: 미정
-- 차별점 3: 미정
-
-## 범위 제한
-
-- 미정
-
-## 첫 플레이 가능 버전에서 증명할 것
-
-1. 미정
-2. 미정
-3. 미정
+What must the first playable version prove?

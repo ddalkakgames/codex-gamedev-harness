@@ -1,28 +1,27 @@
-# 핵심 루프 시스템
+# Core Loop System
 
-## 목적
+## Purpose
 
-플레이어가 짧은 코스를 반복해서 플레이하고, 수집량과 클리어 시간을 개선하게 만든다.
+The core loop defines the minimum playable sequence for Starball Run.
 
-## 상태 흐름
+## State Flow
 
-| 상태 | 설명 | 다음 상태 |
+| State | Meaning | Next State |
 |---|---|---|
-| Ready | 시작 대기 또는 리스폰 직후 | Playing |
-| Playing | 이동, 점프, 수집, 회피 진행 | Cleared 또는 Failed |
-| Cleared | 골 게이트 도달 | Result |
-| Failed | 낙하, 충돌, 시간 초과 | Retry |
-| Result | 기록 표시 | Ready |
+| Ready | Waiting at start or after respawn | Playing |
+| Playing | Player moves, collects, avoids hazards, and heads to the goal | Clear, Fail, or Retry |
+| Clear | Player reaches the goal gate | Result / Retry |
+| Fail | Player falls, hits a hazard, or times out | Retry |
+| Retry | Stage resets | Ready |
 
-## v0.2 최소 구현
+## Required Feedback
 
-- 플레이 시작 시 타이머 시작
-- 별 조각/에너지 공 수집 수 카운트
-- 골 게이트 오버랩 시 클리어 로그 출력
-- 실패 조건 발생 시 시작 지점으로 리셋
+- Start point is obvious.
+- Collectibles disappear or trigger feedback when collected.
+- Hazards communicate danger before contact.
+- Goal gate reads as the destination.
+- Clear and failure states are visible.
 
-## 이후 확장
+## Validation
 
-- v0.3: HUD, 결과 화면, 리트라이 입력
-- v0.4: 등급 판정, 최고 기록 저장
-- v0.5: 여러 스테이지 선택
+The loop is valid when the player can start, collect at least one item, avoid or hit a hazard, reach the goal, and retry.

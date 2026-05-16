@@ -1,27 +1,13 @@
-# 시스템 설계
+# Systems
 
-이 디렉터리는 게임디자인 문서에서 파생된 시스템 설계를 보관한다.
+System documents describe how game rules turn the concept into playable behavior.
 
-시스템 설계는 기능 목록이 아니다. 시스템은 게임의 규칙, 데이터, 피드백, 구성요소, 아트 요구사항, 개발 요구사항, QA 기준을 함께 정의한다.
+Each system should include:
 
-## 시스템 문서에 들어갈 내용
-
-각 시스템 문서는 아래를 포함한다.
-
-- 설계 의도
-- 관련 게임 설계 원칙
-- 플레이어에게 보이는 규칙
-- 시스템 구성요소
-- 데이터 구조
-- 필요한 아트 표현과 가독성 기준
-- 프로그램 개발 요구사항
-- UX 피드백
-- QA 시나리오
-- 의존 관계
-- 첫 플레이 가능 버전에 포함할 최소 범위
-
-## 현재 시스템
-
-| 시스템 | 상태 | 문서 |
-|---|---|---|
-| 핵심 반복 구조 | 초안 | `core_loop.system.md` |
+- purpose
+- inputs
+- rules
+- outputs
+- required art/UX feedback
+- Unreal implementation notes
+- validation criteria

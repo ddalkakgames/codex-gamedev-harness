@@ -1,30 +1,25 @@
-# v0.3 반복 플레이 + 아트 Vertical Slice
+# v0.3 Art Vertical Slice
 
-## 목표
+## Purpose
 
-반복 플레이 흐름을 추가하고, 첫 화면에서 `별공 런`의 독자적인 시각 정체성이 보이도록 대표 전용 아트를 통합한다.
+Replace key proxy visuals with Starball Run-specific assets and add enough UX feedback to make the game identity visible.
 
-## 완료 기준
+## Required Outputs
 
-| 영역 | 기준 |
+| Output | Status |
 |---|---|
-| 반복 플레이 | 클리어/실패 후 재시작 가능 |
-| HUD | 별/공 수집량과 시간이 표시됨 |
-| 결과 | 클리어 결과가 표시됨 |
-| 플레이어 아트 | 전용 플레이어 실루엣이 적용됨 |
-| 수집물 아트 | 별 조각과 에너지 공이 전용 형태/색으로 구분됨 |
-| 장애물 아트 | 위험 장애물의 충돌 범위를 시각적으로 예측 가능 |
-| 골 게이트 아트 | 도착지로 인식 가능한 전용 게이트가 적용됨 |
-| 플랫폼 키트 | 기본 발판과 움직이는 발판의 전용 형태가 적용됨 |
-| 검증 | 아트 교체 후에도 map check와 수동 플레이가 통과 |
+| HUD score/time display | Pending |
+| Result and retry flow | Pending |
+| Lumi proxy character | Planned |
+| Star shard and energy orb assets | Planned |
+| Hazard device asset | Planned |
+| Goal gate asset | Planned |
+| Platform kit and lift system assets | Planned |
+| Basic VFX for reward, danger, and clear | Planned |
 
-## 미완료 허용 범위
+## Completion Criteria
 
-- 모든 스테이지용 에셋 양산
-- 최종 사운드
-- 최고 기록 저장
-- 최종 UI 애니메이션
-
-## 현재 판정
-
-계획 수립.
+- The first screen visibly reads as Starball Run, not a template-only prototype.
+- Core gameplay remains readable after art replacement.
+- Key assets are imported into Unreal and validated in gameplay camera.
+- Collision expectations match visual forms.

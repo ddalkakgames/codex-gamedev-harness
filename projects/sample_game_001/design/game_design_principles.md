@@ -1,38 +1,13 @@
-# 게임 설계 원칙
+# Sample Game Design Principles
 
-상태: 초안
-목적: 모든 시스템, 아트, 개발, UX 판단이 따라야 할 게임의 핵심 기준을 정한다.
+## Purpose
 
-## 작성 원칙
+Design principles help agents and humans make consistent decisions.
 
-게임 설계 원칙은 멋있는 구호가 아니라 실제 의사결정 기준이어야 한다.
+## Sample Principles
 
-좋은 게임 설계 원칙은 아래 질문에 답할 수 있어야 한다.
-
-- 이 기준 때문에 어떤 시스템 결정을 다르게 하게 되는가?
-- 이 기준이 아트 방향에 어떤 요구를 만드는가?
-- 이 기준을 QA나 플레이테스트에서 어떻게 확인할 수 있는가?
-
-## 게임 설계 원칙 목록
-
-| ID | 게임 설계 원칙 | 의미 | 검증 방법 |
-|---|---|---|---|
-| `principle_01` | 미정 | 미정 | 미정 |
-| `principle_02` | 미정 | 미정 | 미정 |
-| `principle_03` | 미정 | 미정 | 미정 |
-
-## 하지 않을 방향
-
-하지 않을 방향도 명확히 둔다.
-
-| ID | 하지 않을 방향 | 이유 |
+| Principle | Meaning | Validation |
 |---|---|---|
-| `anti_01` | 미정 | 미정 |
-
-## 추적 관계
-
-각 시스템 설계는 어떤 게임 설계 원칙을 만족하기 위해 존재하는지 기록해야 한다.
-
-| 게임 설계 원칙 | 관련 시스템 | 관련 아트 방향 | 관련 UX | 관련 QA |
-|---|---|---|---|---|
-| `principle_01` | 미정 | 미정 | 미정 | 미정 |
+| Readability first | The player should understand goals, rewards, and danger quickly | First-time player can identify the next action |
+| Small slices | Build one playable loop before expanding content | Each version has a playable validation target |
+| Traceable output | Every asset and feature should map to a design need | Traceability matrix stays updated |

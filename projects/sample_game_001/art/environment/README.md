@@ -1,3 +1,3 @@
-# 환경
+# Environment
 
-배경, 레벨 아트, prop, 조명 기준을 둔다.
+This sample folder is reserved for environment documents in a real project.

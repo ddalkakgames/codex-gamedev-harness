@@ -1,19 +1,12 @@
-# 작업 항목
+# Work Items
 
-## 지금 진행할 작업
-
-| ID | 작업 | 담당 성격 | 상태 |
+| ID | Task | Discipline | Status |
 |---|---|---|---|
-| WI-001 | v0.1 문서 세트 작성 | 기획/제작관리 | 완료 |
-| WI-002 | 기존 UE 템플릿 에셋 조사 | 개발 | 완료 |
-| WI-003 | 첫 코스 액터 배치 | 레벨/개발 | 조건부 완료 |
-| WI-004 | 수집/장애물/골 동작 확인 | 개발/QA | 대기 |
-| WI-005 | StarballRun 전용 맵을 열고 배치 고정 | 레벨/개발 | 대기 |
-| WI-006 | 골/장애물 전용 블루프린트 로직 구현 | 개발 | 대기 |
-| WI-007 | 아트 전용 제작 전략 수립 | 아트/제작관리 | 완료 |
-| WI-008 | v0.3 아트 vertical slice 브리프 확정 | 아트/기획 | 완료 |
-| WI-009 | 전용 수집물/장애물/골 proxy 제작 | 아트/개발 | 대기 |
-
-## 작업 작성 규칙
-
-각 작업은 목적, 산출물, 완료 기준을 같이 적는다. 완료 기준이 없는 작업은 구현하지 않는다.
+| WI-001 | Lock v0.2 first playable route | Design / Level | Pending |
+| WI-002 | Open final StarballRun map and re-place course actors | Level / Engineering | Pending |
+| WI-003 | Implement hazard failure logic | Engineering | Pending |
+| WI-004 | Implement goal gate clear logic | Engineering | Pending |
+| WI-005 | Validate collection, hazard, goal, and retry loop | QA | Pending |
+| WI-006 | Produce v0.3 core object art assets | Art | Pending |
+| WI-007 | Import generated/produced assets through GameDevMCP | Integration | Pending |
+| WI-008 | Record playable validation report | QA / Production | Pending |

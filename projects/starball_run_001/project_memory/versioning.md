@@ -1,24 +1,23 @@
-# 버전 규칙
+# Versioning
 
-## 버전 단계
+## Version Plan
 
-| 버전 | 의미 |
+| Version | Purpose |
 |---|---|
-| v0.1 | 기획 고정 |
-| v0.2 | 첫 플레이어블 + 아트 프리프로덕션 |
-| v0.3 | 반복 플레이 + 아트 vertical slice |
-| v0.4 | 튜닝/기록 + 아트 확장 |
-| v1.0 | 미니게임 완성 |
+| v0.1 | Design lock |
+| v0.2 | First playable prototype |
+| v0.3 | Replay loop and art vertical slice |
+| v0.4 | Tuning and art expansion |
+| v1.0 | Small complete game |
 
-## 판정 기준
+## Completion States
 
-- 완성: 버전 완료 기준을 모두 만족
-- 조건부 완성: 플레이는 가능하지만 명시된 잔여 이슈가 있음
-- 미완성: 핵심 루프가 끊김
+| State | Meaning |
+|---|---|
+| Complete | Meets all required validation criteria |
+| Conditionally complete | Playable, but has documented non-blocking issues |
+| Incomplete | Missing required systems, validation, or playable flow |
 
-## 아트 판정 기준
+## Rule
 
-- Proxy: 크기, 충돌, 판독성만 검증한 임시 에셋
-- Prototype Art: 게임 고유 형태와 색이 들어간 전용 임시 에셋
-- Slice Art: 첫 화면 품질 기준을 만족하는 대표 에셋
-- Release Art: 반복 사용, 최적화, 연출까지 고려한 최종 에셋
+A version decision must cite evidence from QA, implementation logs, or production review documents.

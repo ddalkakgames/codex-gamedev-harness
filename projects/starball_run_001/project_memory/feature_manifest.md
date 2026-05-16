@@ -1,13 +1,13 @@
-# 기능 목록
+# Feature Manifest
 
-| 기능 | 버전 | 상태 | 검증 |
+| Feature | Version | Status | Validation |
 |---|---|---|---|
-| 캐릭터 이동/점프 | v0.2 | 전용 BP 복제 완료 | 블루프린트 컴파일 성공 |
-| 별 조각 수집 | v0.2 | 수집물 BP 복제 완료 | StarballRun 맵에서 플레이 검증 필요 |
-| 에너지 공 수집 | v0.2 | 수집물 BP 재사용 예정 | StarballRun 맵에서 플레이 검증 필요 |
-| 장애물 실패 | v0.2 | 후보 hazard 배치 | 전용 실패 로직 필요 |
-| 골 게이트 클리어 | v0.2 | TriggerBox 배치 검증 | 전용 클리어 로직 필요 |
-| HUD | v0.3 | 대기 | 점수/시간 표시 |
-| 결과 화면 | v0.3 | 대기 | 클리어 결과 표시 |
-| 아트 vertical slice | v0.3 | 계획 수립 | 대표 전용 에셋 적용 후 플레이 검증 |
-| 최고 기록 | v0.4 | 대기 | 기록 저장/갱신 |
+| Character move/jump | v0.2 | Prototype Blueprint duplicated | Blueprint compile succeeded |
+| Star shard collection | v0.2 | Collectible Blueprint duplicated | Needs play validation in StarballRun map |
+| Energy orb collection | v0.2 | Planned through collectible variant | Needs play validation in StarballRun map |
+| Hazard failure | v0.2 | Candidate hazard placement | Needs dedicated failure logic |
+| Goal gate clear | v0.2 | Trigger candidate placed | Needs dedicated clear logic |
+| HUD | v0.3 | Pending | Score/time display |
+| Result screen | v0.3 | Pending | Clear/failure result |
+| Art vertical slice | v0.3 | Planned | Representative assets integrated and validated |
+| Best record | v0.4 | Pending | Save/update record |

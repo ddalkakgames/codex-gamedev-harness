@@ -1,24 +1,31 @@
-# UX 설계
+# UX Design
 
-## 화면 정보
+## Purpose
 
-v0.2에서는 화면 메시지와 로그로만 검증하고, v0.3부터 HUD를 만든다.
+UX should make goals, rewards, risk, success, failure, and retry understandable with minimal explanation.
 
-## HUD v0.3 구성
+## Required Feedback
 
-| 위치 | 정보 |
+| Event | Feedback |
 |---|---|
-| 좌상단 | 별 조각 수, 에너지 공 수 |
-| 우상단 | 경과 시간 |
-| 중앙 | 클리어/실패 짧은 메시지 |
+| Stage start | Camera and spawn point orient the player |
+| Star shard collected | Quick gold pickup feedback |
+| Energy orb collected | Stronger cyan bonus feedback |
+| Hazard danger | Orange warning / hot core / danger range |
+| Failure | Clear reason and quick reset |
+| Goal reached | Portal clear feedback and result state |
+| Retry | Fast restart into the same stage |
 
-## 피드백 기준
+## HUD Targets
 
-- 별 조각 획득: 작고 빠른 발광 효과
-- 에너지 공 획득: 별보다 큰 효과와 다른 색
-- 장애물 충돌: 즉시 정지 또는 리스폰 전 짧은 피드백
-- 골 도달: 게이트 발광과 결과 메시지
+v0.3 should add:
 
-## 입력 기준
+- score
+- timer
+- collected bonus count
+- clear/failure result
+- retry prompt
 
-입력은 기존 사이드 스크롤링 템플릿의 이동/점프를 우선 사용한다. 별도 입력 매핑 변경은 첫 플레이어블 검증 뒤 진행한다.
+## Rule
+
+UX should not compensate for unclear level or asset design. The world itself should communicate the next action whenever possible.

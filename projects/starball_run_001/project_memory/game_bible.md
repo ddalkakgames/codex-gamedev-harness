@@ -1,22 +1,27 @@
-# 게임 바이블
+# Starball Run Game Bible
 
-## 프로젝트 이름
+## Durable Summary
 
-별공 런
+Starball Run is a short 2.5D platform game about collecting star shards and energy orbs, avoiding hazards, and reaching a goal gate. The project exists to validate the Codex GameDev Harness pipeline from game design through generated references, Unreal automation, and playable validation.
 
-## 세계관 요약
+## Core Promise
 
-하늘의 별을 정비하는 작은 공방이 흔들리며 별 조각과 에너지 공이 흩어진다. 플레이어는 제한된 시간 안에 별 에너지를 회수하고 다음 게이트를 열어야 한다.
+The player should understand the route through rewards, recognize risk through clear hazard language, reach a readable goal, and want to retry for a better score or time.
 
-## 고유 명칭
+## Key Terms
 
-| 용어 | 의미 |
+| Term | Meaning |
 |---|---|
-| 별 조각 | 기본 수집물 |
-| 에너지 공 | 보너스 수집물 |
-| 골 게이트 | 스테이지 클리어 지점 |
-| 천문 공방 | 첫 스테이지 배경 |
+| Lumi | Player character |
+| Star shard | Basic collectible and route guide |
+| Energy orb | Bonus collectible placed near risk |
+| Hazard device | Contact failure or respawn obstacle |
+| Goal gate | Stage clear destination |
+| Platform lift | Vertical movement system for platforms |
 
-## 금지 기준
+## Current Production Focus
 
-기존 상용 게임의 캐릭터명, 보스명, 스테이지명, UI, 연출을 그대로 쓰지 않는다.
+- v0.2 first playable prototype
+- v0.3 art vertical slice planning
+- gameplay object concept and modeling references
+- GameDevMCP-based Unreal workflow validation

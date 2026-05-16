@@ -1,36 +1,30 @@
 # sample_game_001
 
-상태: 샘플 초안
+Status: structure sample.
 
-이 디렉터리는 AI 게임 스튜디오 운영 프레임워크의 프로젝트별 문서 구조를 검토하기 위한 샘플 게임 프로젝트다.
+This project is a placeholder used to review the per-project document structure for Codex GameDev Harness. It is not a selected game concept.
 
-아직 실제 게임 컨셉이 선택된 상태는 아니다. 모든 문서는 "게임 컨셉에서 시작해 시스템, 아트, 개발, UX, QA, 버전으로 내려가는 구조"를 검토하기 위한 초안이다.
-
-## 문서 구조
+## Structure
 
 ```text
 sample_game_001/
-  design/         # 게임 컨셉, 게임 설계 원칙, 게임디자인 문서
-  systems/        # 시스템 설계
-  art/            # 아트 서브 하네스
-    direction/    # 아트 방향
-    concepts/     # 컨셉 브리프와 이미지 검토
-    production/   # 에셋 작업 지시서
-    <category>/images/<stage>/ # 카테고리별 컨셉/모델링 reference
-  engineering/    # 기술 설계와 개발 백로그
-  ux/             # UX 설계
-  qa/             # 검증 전략
-  production/     # 제작 파이프라인, 로드맵, 추적표
-  slices/         # 플레이 가능한 세로 단면
-  versions/       # 버전 정의
-  work_items/     # 시스템에서 파생된 작업 항목
-  project_memory/ # 이 프로젝트의 현재 결정 요약
+  design/         # concept, principles, design document
+  systems/        # system specs
+  art/            # art sub-harness
+  engineering/    # technical design and backlog
+  ux/             # UX design
+  qa/             # validation strategy
+  production/     # pipeline, roadmap, traceability
+  slices/         # playable vertical slices
+  versions/       # version definitions
+  work_items/     # production work items
+  project_memory/ # persistent project decisions
 ```
 
-## 다음 결정
+## Next Decisions
 
-1. 실제 게임 컨셉 후보를 작성한다.
-2. 하나의 컨셉을 선택한다.
-3. 게임 설계 원칙 2~3개를 확정한다.
-4. 핵심 반복 구조를 정의한다.
-5. 첫 플레이 가능 버전의 플레이어 경험 약속을 작성한다.
+1. Draft candidate game concepts.
+2. Select one concept.
+3. Define two or three design principles.
+4. Define the core loop.
+5. Define the first playable promise.

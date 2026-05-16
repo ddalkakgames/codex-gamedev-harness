@@ -1,43 +1,37 @@
-# 시스템 설계: <시스템 이름>
+# System Spec
 
-상태: 초안
+## System Name
 
-## 설계 의도
+TBD
 
-미정
+## Purpose
 
-## 관련 게임 설계 원칙
+Explain why this system exists and what player behavior it supports.
 
-| 게임 설계 원칙 | 관계 |
-|---|---|
-| `principle_01` | 미정 |
+## Inputs
 
-## 시스템 규칙
+| Input | Source | Notes |
+|---|---|---|
+| TBD | TBD | TBD |
 
-- 미정
+## Rules
 
-## 시스템 구성요소
+1. TBD
 
-| 구성요소 | 목적 | 상태 | 파생 작업 |
-|---|---|---|---|
-| 미정 | 미정 | 미정 | 미정 |
+## Outputs
 
-## 아트 요구사항
+| Output | Consumer | Notes |
+|---|---|---|
+| TBD | TBD | TBD |
 
-- 미정
+## Art / UX Requirements
 
-## 개발 요구사항
+What must the player see, hear, or understand?
 
-- 미정
+## Unreal Implementation Notes
 
-## UX 요구사항
+List expected Blueprint, C++, asset, level, or data requirements.
 
-- 미정
+## Validation
 
-## QA 시나리오
-
-- 미정
-
-## 첫 플레이 가능 버전의 최소 범위
-
-- 미정
+How do we prove this system works in the playable slice?

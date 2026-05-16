@@ -1,3 +1,3 @@
-# 캐릭터
+# Characters
 
-플레이어, NPC, 적, 보스 등 캐릭터 아트 기준을 둔다.
+This sample folder is reserved for characters documents in a real project.

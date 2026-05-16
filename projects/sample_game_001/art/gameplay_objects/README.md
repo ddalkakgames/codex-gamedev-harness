@@ -1,3 +1,3 @@
-# 게임플레이 오브젝트
+# Gameplay Objects
 
-수집물, 장애물, 상호작용물, 목표물의 형태와 판독 기준을 둔다.
+This sample folder is reserved for gameplay objects documents in a real project.

@@ -1,69 +1,14 @@
-# 게임 바이블
+# Sample Game Bible
 
-상태: 초안
-목적: AI가 게임의 현재 결정을 매 작업마다 일관되게 참조하기 위한 프로젝트 메모리
+This file should summarize durable project decisions after a real concept is selected.
 
-## 기준 문서
+## Include
 
-게임 바이블은 모든 내용을 처음부터 상세히 쓰는 문서가 아니다. 아래 기본 문서들의 현재 결정을 요약해 저장하는 메모리다.
-
-- `../design/game_concept.md`
-- `../design/game_design_principles.md`
-- `../design/game_design_document.md`
-- `../systems/core_loop.system.md`
-- `../production/traceability_matrix.md`
-
-## 현재 게임 정체성
-
-- 작업명: 미정
-- 장르: 미정
-- 카메라: 미정
-- 목표 플랫폼: 미정
-- 목표 플레이어: 미정
-- 목표 플레이 시간: 미정
-
-## 현재 창작 방향
-
-- 한 줄 소개: 미정
-- 플레이어 판타지: 미정
-- 핵심 감정: 미정
-- 시각 톤: 미정
-- 사운드 톤: 미정
-- UX 톤: 미정
-
-## 현재 게임 설계 원칙
-
-- 기둥 1: 미정
-- 기둥 2: 미정
-- 기둥 3: 미정
-
-## 현재 핵심 반복 구조
-
-```text
-미정
-```
-
-## 현재 시스템
-
-| 시스템 | 상태 | 출처 |
-|---|---|---|
-| 핵심 반복 구조 | 초안 | `systems/core_loop.system.md` |
-
-## 현재 제작 범위
-
-초기 목표는 단일 actor 구현이 아니라 첫 플레이 가능한 반복 구조다.
-
-대상:
-
-```text
-v0.2_first_playable
-```
-
-## 열려 있는 결정
-
-- 어떤 게임 컨셉을 선택할 것인가
-- 핵심 반복 구조의 시작/종료 조건
-- 첫 플레이 가능 세로 단면의 플레이어 약속
-- 필요한 임시 아트 범위
-- 필요한 개발 기본 구조
-- 필요한 QA/플레이테스트 근거
+- game promise
+- target player experience
+- core loop
+- art direction summary
+- feature list
+- asset list
+- version milestones
+- validation rules

@@ -1,30 +1,33 @@
-# v0.2 첫 플레이어블 Slice
+# First Playable Slice
 
-## 목표
+## Purpose
 
-플레이어가 시작 지점에서 골 게이트까지 이동하며 별/공을 모으고 장애물을 피하는 30~60초짜리 코스를 만든다.
+The first playable slice proves the Starball Run loop with the smallest useful course.
 
-## 포함 기능
+## Required Player Flow
 
-- 사이드 스크롤링 캐릭터 이동
-- 기본 발판 경로
-- 별 조각 10개 내외
-- 에너지 공 3개 내외
-- 움직이는 발판 1개 이상
-- 위험 장애물 2개 이상
-- 골 게이트 1개
-- 실패 시 리스폰 또는 재시작
-- 아트 콘셉트 브리프와 전용 에셋 우선순위
+1. Start at a clear spawn point.
+2. Move and jump through a short platform path.
+3. Collect star shards along the main route.
+4. Optionally collect at least one energy orb near risk.
+5. Avoid or fail against a hazard.
+6. Reach the goal gate.
+7. Restart after clear or failure.
 
-## 완료 기준
+## Required Outputs
 
-- 시작부터 골까지 실제 플레이로 도달 가능하다.
-- 최소 하나 이상의 수집물이 정상 동작한다.
-- 최소 하나 이상의 장애물이 실패 조건을 만든다.
-- 골 도달 시 클리어 확인이 가능하다.
-- 맵 체크에 치명 오류가 없다.
-- 수집물, 장애물, 골 게이트의 전용 아트 제작 방향이 문서화되어 있다.
+| Discipline | Output | Status |
+|---|---|---|
+| Design | First stage structure | Defined |
+| Systems | Core loop and collectible/hazard/goal rules | Defined |
+| Art | Proxy objects and art direction | Planned |
+| Engineering | Prototype Blueprints and map layout | Partially created |
+| UX | Minimal result/retry feedback | Pending |
+| QA | Map check and play validation | Partially recorded |
 
-## 품질 기준
+## Completion Criteria
 
-첫 플레이어블은 재미 검증용이다. 최종 아트 품질, 사운드, 결과 UI는 필수 조건이 아니다. 다만 실전 연습이므로 아트 전용 제작을 뒤로 미루지 않고, v0.2에서 콘셉트와 proxy 제작 계획까지 확정한다.
+- The stage can be opened in Unreal.
+- Player movement, collection, hazard, goal, and retry are testable.
+- Critical map errors are absent.
+- Remaining issues are recorded.

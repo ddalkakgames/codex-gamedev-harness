@@ -1,42 +1,42 @@
-# 제작 로드맵
+# Production Roadmap
 
-## v0.1 기획 고정
+## v0.1 Design Lock
 
-- 콘셉트 확정
-- 게임 설계 원칙 확정
-- 첫 스테이지 구조 정의
-- v0.2 구현 백로그 작성
+- Lock concept.
+- Lock design principles.
+- Define first stage structure.
+- Write v0.2 implementation backlog.
 
-## v0.2 첫 플레이어블
+## v0.2 First Playable
 
-- 기존 사이드 스크롤링 템플릿 기반 플레이 가능 코스 구성
-- 수집물, 장애물, 골 게이트를 한 스테이지에 통합
-- 맵 체크와 수동 플레이 검증 통과
-- 아트 전용 제작 방향, 콘셉트 브리프, 에셋 우선순위 확정
-- 수집물/장애물/골 게이트의 전용 아트 proxy 제작 시작
+- Build a playable course using side-scrolling template assets.
+- Integrate collectibles, hazards, and goal gate in one stage.
+- Pass map check and manual play validation.
+- Lock art direction, concept brief, and asset priority.
+- Start dedicated art proxy work for collectibles, hazards, and goal gate.
 
-## v0.3 반복 플레이 + 아트 vertical slice
+## v0.3 Replay Loop + Art Vertical Slice
 
-- HUD
-- 결과 화면
-- 리트라이 흐름
-- 점수/시간 표시
-- 플레이어, 수집물, 장애물, 골 게이트, 플랫폼 키트의 대표 전용 에셋 통합
-- 첫 화면에서 StarballRun의 시각 정체성이 보이는 상태 달성
+- HUD.
+- Result screen.
+- Retry flow.
+- Score and time display.
+- Integrate representative project-specific assets for player, collectibles, hazards, goal gate, and platform kit.
+- Achieve visible Starball Run identity on the first screen.
 
-## v0.4 튜닝 + 아트 확장 버전
+## v0.4 Tuning + Art Expansion
 
-- 수집물 배치 튜닝
-- 장애물 난이도 튜닝
-- 클리어 등급
-- 최고 기록 저장
-- 배경 키트, VFX, UI 아이콘 1차 확장
-- 템플릿 에셋 의존도 축소
+- Tune collectible placement.
+- Tune hazard difficulty.
+- Add clear grades.
+- Save best records.
+- Expand background kit, VFX, and UI icons.
+- Reduce template asset dependency.
 
-## v1.0 미니게임 완성 기준
+## v1.0 Small Complete Game
 
-- 최소 3개 스테이지
-- 각 스테이지별 다른 핵심 장애물
-- 점수/시간 기반 재도전 구조
-- StarballRun 전용 캐릭터, 수집물, 장애물, 발판, 배경, UI, 기본 사운드/이펙트/연출
-- 시작, 플레이, 결과, 재시작 흐름 완성
+- Minimum three stages.
+- A different core obstacle per stage.
+- Score/time replay structure.
+- Starball Run-specific character, collectibles, hazards, platforms, environment, UI, basic sound, VFX, and presentation.
+- Complete start, play, result, and restart flow.

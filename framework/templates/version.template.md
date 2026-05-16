@@ -1,43 +1,43 @@
-# 버전: <version_id>
+# Version Definition
 
-상태: 초안
+## Version
 
-## 의미
+TBD
 
-미정
+## Purpose
 
-## 플레이어에게 약속하는 경험
+Explain what this version must prove.
 
-미정
+## Required Inputs
 
-## 포함되는 디자인 범위
-
-| 항목 | 상태 | 출처 |
+| Input | Status | Source |
 |---|---|---|
-| 선택된 컨셉 | 대기 | `../design/game_concept.md` |
-| 게임 설계 원칙 | 대기 | `../design/game_design_principles.md` |
-| 핵심 반복 구조 | 대기 | `../systems/core_loop.system.md` |
+| Game concept | Pending | `../design/game_concept.md` |
+| Design principles | Pending | `../design/game_design_principles.md` |
+| Core loop | Pending | `../systems/core_loop.system.md` |
 
-## 필요한 시스템
+## Required Systems
 
-| 시스템 | 필요한 최소 범위 | 상태 |
+| System | Minimum Scope | Status |
 |---|---|---|
-| 미정 | 미정 | 대기 |
+| TBD | TBD | Pending |
 
-## 필요한 제작 산출물
+## Required Outputs
 
-| 분야 | 산출물 | 상태 |
+| Discipline | Output | Status |
 |---|---|---|
-| 기획 | 미정 | 대기 |
-| 아트 | 미정 | 대기 |
-| 개발 | 미정 | 대기 |
-| UX | 미정 | 대기 |
-| QA | 미정 | 대기 |
+| Design | TBD | Pending |
+| Art | TBD | Pending |
+| Engineering | TBD | Pending |
+| UX | TBD | Pending |
+| QA | TBD | Pending |
 
-## 제외 범위
+## Completion Criteria
 
-- 미정
+1. TBD
 
-## 버전 검증 기준
+## Decision
 
-1. 미정
+- Complete
+- Conditionally complete
+- Incomplete

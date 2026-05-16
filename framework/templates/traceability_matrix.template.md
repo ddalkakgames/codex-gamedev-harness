@@ -1,16 +1,9 @@
-# 제작 추적표
+# Traceability Matrix
 
-상태: 초안
+| Design Intent | System | Art Output | Engineering Output | Validation |
+|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD |
 
-## 추적표
+## Usage
 
-| 게임 설계 원칙 | 시스템 | 구성요소 | 아트 지시서 | 개발 작업 | UX 흐름 | QA 시나리오 | 대상 세로 단면/버전 |
-|---|---|---|---|---|---|---|---|
-| 미정 | 미정 | 미정 | 미정 | 미정 | 미정 | 미정 | 미정 |
-
-## 사용 규칙
-
-1. 모든 작업 항목은 출처 시스템 구성요소가 있어야 한다.
-2. 모든 아트 지시서는 게임플레이 가독성 목적이 있어야 한다.
-3. 모든 개발 작업은 검증 시나리오와 연결되어야 한다.
-4. 버전에 포함되는 항목은 대상 세로 단면/버전이 명시되어야 한다.
+Use this file to prove that design intent is connected to systems, assets, implementation, and validation.

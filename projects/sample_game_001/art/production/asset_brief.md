@@ -1,59 +1,29 @@
-# 에셋 작업 지시서 템플릿
+# Sample Asset Brief
 
-상태: 템플릿
+Status: template sample.
 
-## 에셋 지시서 ID
+## Asset
 
-`ab_<시스템_또는_콘텐츠>_<이름>_###`
+TBD
 
-## 출처
+## Gameplay Purpose
 
-- 게임 컨셉:
-- 게임 설계 원칙:
-- 시스템:
-- 시스템 구성요소:
-- 대상 세로 단면 / 버전:
+Explain what the asset does in the game and why the player needs to understand it.
 
-## 게임플레이 목적
+## Required Outputs
 
-이 에셋이 게임플레이에서 어떤 정보를 전달하거나 어떤 상태를 표현하는가?
-
-미정
-
-## 플레이어 가독성
-
-- 실루엣:
-- 색상/재질:
-- 애니메이션/VFX:
-- 크기:
-- 카메라 거리:
-
-## 제작 단계
-
-- 단계: 임시 / 첫 플레이 가능 버전 / 최종 제작
-- 필요한 버전:
-- 임시 대체 가능 여부: 예/아니오
-
-## 산출물
-
-| 산출물 | 필요 여부 | 비고 |
+| Output | Required? | Notes |
 |---|---|---|
-| 컨셉 스케치 | 아니오 |  |
-| 메시 | 아니오 |  |
-| 머티리얼 | 아니오 |  |
-| 애니메이션 | 아니오 |  |
-| 이펙트 | 아니오 |  |
-| UI 아이콘 | 아니오 |  |
-| 사운드 큐 | 아니오 |  |
+| Concept reference | TBD | Visual direction |
+| Modeling reference | TBD | Scale, parts, and silhouette |
+| Mesh | TBD | Static or skeletal |
+| Material | TBD | Surface and readability |
+| VFX | TBD | Feedback or state indication |
+| Blueprint integration | TBD | Gameplay behavior |
 
-## 언리얼 연동 메모
+## Review Criteria
 
-- 대상 폴더:
-- 네이밍:
-- 충돌:
-- LOD/성능:
-- Blueprint/component 의존성:
-
-## 승인 기준
-
-- 미정
+- The asset supports the game design.
+- The asset is readable at gameplay distance.
+- The collision expectation matches the visual shape.
+- The asset can be imported and validated in Unreal.

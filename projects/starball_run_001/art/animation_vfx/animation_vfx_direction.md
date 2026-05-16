@@ -1,59 +1,28 @@
-# 애니메이션 / VFX 방향
+# Animation and VFX Direction
 
-## 목적
+## Purpose
 
-작은 플랫폼 게임에서 입력 반응과 게임 규칙이 즉시 읽히도록 움직임과 효과 기준을 정한다.
+Animation and VFX should make gameplay state readable: movement, reward, danger, goal, success, and failure.
 
-## 공통 원칙
+## Motion Rules
 
-- 모든 피드백은 짧고 명확해야 한다.
-- 수집 VFX는 플레이어 이동을 가리면 안 된다.
-- 위험 VFX는 실제 충돌 범위를 예측하게 해야 한다.
-- 골 VFX는 클리어 순간만 크게 보여준다.
+| Element | Motion Direction |
+|---|---|
+| Lumi | Bouncy, quick, readable anticipation |
+| Star shard | Gentle spin or sparkle |
+| Energy orb | Slow pulse with stronger bonus feel |
+| Hazard device | Rotating or heating motion before danger |
+| Moving platform | Smooth predictable movement |
+| Lift platform | Clear vertical travel with visible actuator feedback |
+| Goal gate | Idle portal pulse and stronger clear burst |
 
-## 루미 애니메이션
+## VFX Rules
 
-| 상태 | 길이/느낌 | 핵심 포인트 |
-|---|---|---|
-| Idle | 1.5~2초 loop | 공구 만지기, 작은 호흡 |
-| Run | 빠른 loop | 상체 전방 기울기, 큰 부츠 리듬 |
-| Jump start | 2~3프레임 예비 동작 | 몸을 살짝 낮춤 |
-| Jump air | 짧은 체공 loop | 팔을 벌리고 별 장식 반짝임 |
-| Fall | 방향 유지 | 발이 아래로 향함 |
-| Land | 짧은 squash | 부츠 착지, 작은 별가루 |
-| Collect | 0.2초 이하 | 에너지 팩 점멸 |
-| Damage | 0.4초 내외 | 뒤로 튕김, 별 장식 잠깐 꺼짐 |
+- Reward VFX should be short and satisfying.
+- Hazard VFX should communicate danger range before failure.
+- Goal VFX should guide the eye toward the destination.
+- VFX must not hide platform edges or collision boundaries.
 
-## 수집 VFX
+## Priority
 
-### 별 조각
-
-- 작은 금색 별가루가 루미 쪽으로 모인다.
-- 화면 흔들림은 사용하지 않는다.
-- 사운드가 붙는다면 가벼운 금속/유리음.
-
-### 에너지 공
-
-- 청록 원형 파동이 1회 퍼진다.
-- 별 조각보다 조금 더 큰 효과를 사용한다.
-- 보너스 수집물임을 확실히 보여준다.
-
-## 위험 VFX
-
-- 위험 장치는 공격 판정 0.3~0.5초 전에 주황 예고선을 보여준다.
-- 회전 장애물은 궤적 원을 약하게 표시한다.
-- 실제 충돌 범위보다 VFX가 작으면 안 된다.
-- 너무 큰 폭발이나 연기는 플레이 경로를 가리지 않게 한다.
-
-## 골 VFX
-
-- 비활성 상태: 낮은 보라/흰색 빛.
-- 루미 접근 시: 중심 별핵이 밝아짐.
-- 클리어 시: 별 조각과 에너지 빛이 게이트 안으로 모이고 0.8초 정도 밝아짐.
-
-## 금지 방향
-
-- 화면을 가리는 과한 파티클.
-- 위험물과 수집물이 같은 색의 VFX를 쓰는 것.
-- 실패 피드백이 잔혹하거나 공포스럽게 보이는 것.
-- 루미가 점프 중 과도하게 회전해 방향이 안 보이는 것.
+v0.3 focuses on VFX placeholders that prove readability. Final effects can come later after gameplay validation.

@@ -1,23 +1,19 @@
-# v0.1 기획 고정
+# v0.1 Design Lock
 
-## 목표
+## Purpose
 
-첫 플레이어블을 만들 수 있을 만큼 게임의 방향, 범위, 검증 기준을 확정한다.
+Lock the initial design enough to derive systems, assets, implementation tasks, and validation criteria.
 
-## 완료 기준
+## Required Outputs
 
-- 게임 콘셉트 문서 작성
-- 게임 설계 원칙 작성
-- 게임 디자인 문서 작성
-- 핵심 루프 시스템 작성
-- 수집물/장애물/골 시스템 작성
-- v0.2 첫 플레이어블 slice 작성
-- 구현 백로그 작성
+| Output | Status |
+|---|---|
+| Game concept | Complete |
+| Design principles | Complete |
+| Core loop system | Complete |
+| First stage structure | Complete |
+| v0.2 backlog | Drafted |
 
-## 현재 판정
+## Completion Criteria
 
-완성.
-
-## 완료 일자
-
-2026-05-07.
+v0.1 is complete when the project can explain what the player does, why it is fun, what the first playable must prove, and what assets/systems are required next.
